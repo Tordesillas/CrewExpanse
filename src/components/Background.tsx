@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import Svg, {Defs, RadialGradient, Rect, Stop} from "react-native-svg";
+import Svg, {Defs, RadialGradient, Rect, Stop} from 'react-native-svg';
 
 export default class Background extends React.Component {
     shouldComponentUpdate(nextProps: any, nextState: any, nextContext: any): boolean {
