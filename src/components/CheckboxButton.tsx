@@ -1,5 +1,6 @@
 import React from 'react';
-import {Platform, StyleSheet, Switch, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
+import Checkbox from './Checkbox';
 import {Colors} from '../utils';
 
 interface Props {
@@ -9,18 +10,16 @@ interface Props {
     subtitle?: string;
 }
 
-export default class SwitchButton extends React.Component<Props> {
+export default class CheckboxButton extends React.Component<Props> {
     render() {
         const {value, onValueChange, title, subtitle} = this.props;
 
         return (
             <View style={styles.main_container}>
-                <View style={styles.switch_wrapper}>
-                    <Switch
+                <View style={styles.checkbox_wrapper}>
+                    <Checkbox
                         value={value}
                         onValueChange={(newValue) => onValueChange(newValue)}
-                        trackColor={Platform.OS === 'android' ? undefined : {true: Colors.BLACK, false: Colors.WHITE}}
-                        thumbColor={Platform.OS === 'android' ? (value ? Colors.BLUE : Colors.WHITE) : undefined}
                     />
                 </View>
 
@@ -43,7 +42,7 @@ const styles = StyleSheet.create({
         marginBottom: 30,
         flexDirection: 'row'
     },
-    switch_wrapper: {
+    checkbox_wrapper: {
         width: 60,
         height: 60,
         marginRight: 8,

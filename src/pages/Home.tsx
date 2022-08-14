@@ -32,7 +32,7 @@ export default class Home extends React.Component<Props> {
 
                 <CornerButton
                     icon={<Play size={50}/>}
-                    onPress={() => {}}
+                    onPress={() => navigation.navigate('DifficultyChoice')}
                     important
                     left
                 />

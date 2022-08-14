@@ -1,6 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
-type DifficultyLevel = 'EASY' | 'NORMAL' | 'HARD' | 'RANDOM';
+import {DifficultyLevel} from '../utils';
 
 const DIFFICULTY_LEVEL = 'DIFFICULTY_LEVEL';
 const IS_SAME_LEVEL = 'IS_SAME_LEVEL';

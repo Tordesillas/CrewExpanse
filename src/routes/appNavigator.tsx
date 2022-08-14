@@ -3,6 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from '../pages/Home';
 import Settings from '../pages/Settings';
+import DifficultyChoice from '../pages/DifficultyChoice';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +23,10 @@ export default function AppNavigator() {
                 <Stack.Screen
                     name='Settings'
                     component={Settings}
+                />
+                <Stack.Screen
+                    name='DifficultyChoice'
+                    component={DifficultyChoice}
                 />
             </Stack.Navigator>
         </NavigationContainer>

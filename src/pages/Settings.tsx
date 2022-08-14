@@ -1,7 +1,7 @@
 import React from 'react';
 import {Linking, StyleSheet, Text, View} from 'react-native';
 import {NavigationProp} from '@react-navigation/native';
-import {Background, Button, CornerButton, SwitchButton} from '../components';
+import {Background, Button, CheckboxButton, CornerButton} from '../components';
 import {Book, LeftArrow} from '../components/icons';
 import StorageService from '../services/StorageService';
 import {Colors} from '../utils';
@@ -39,19 +39,19 @@ export default class Settings extends React.Component<Props, State> {
                 <Text style={styles.title}>CrewExpanse</Text>
 
                 <View style={styles.main_content}>
-                    <SwitchButton
+                    <CheckboxButton
                         value={isSameLevel}
                         onValueChange={(newValue) => this.setState({isSameLevel: newValue},
                             () => StorageService.setIsSameDifficultyLevel(newValue))}
                         title={"Conservation du niveau de difficulté"}
                         subtitle={"Si l'option est cochée, le niveau de difficulté ne sera pas demandé à chaque nouvelle mission."}
                     />
-                    <SwitchButton
+                    <CheckboxButton
                         value={isScoreComputed}
                         onValueChange={(newValue) => this.setState({isScoreComputed: newValue},
                             () => StorageService.setIsScoreComputed(newValue))}
                         title={"Calcul du score"}
-                        subtitle={"Si l'option est cochée, une interface pour gérer le score sera ajoutée durant les missions."}
+                        subtitle={"Si l'option est cochée, une interface qui gère le score sera ajoutée durant les missions."}
                     />
                     <View style={styles.button_wrapper}>
                         <Button
