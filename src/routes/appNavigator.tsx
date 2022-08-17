@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from '../pages/Home';
 import Settings from '../pages/Settings';
 import DifficultyChoice from '../pages/DifficultyChoice';
+import PlayableInterface from '../pages/PlayableInterface';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +28,10 @@ export default function AppNavigator() {
                 <Stack.Screen
                     name='DifficultyChoice'
                     component={DifficultyChoice}
+                />
+                <Stack.Screen
+                    name='PlayableInterface'
+                    component={PlayableInterface}
                 />
             </Stack.Navigator>
         </NavigationContainer>

@@ -27,7 +27,7 @@ export default class Checkbox extends React.Component<Props> {
                             d="m4.5 7.5 2 2 4-4"
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            stroke="#2de125"
+                            stroke={Colors.GREEN}
                             fill="none"
                         />
                     )}

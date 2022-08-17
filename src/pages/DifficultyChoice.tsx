@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
-import {NavigationProp, RouteProp} from '@react-navigation/native';
+import {NavigationProp, RouteProp, StackActions} from '@react-navigation/native';
 import {Background, CheckboxButton, CornerButton, DifficultyLevelButton} from '../components';
 import {LeftArrow} from '../components/icons';
 import StorageService from '../services/StorageService';
@@ -17,6 +17,8 @@ interface State {
 }
 
 export default class DifficultyChoice extends React.Component<Props, State> {
+    isScoreComputed: boolean = false;
+
     constructor(props: Props) {
         super(props);
 
@@ -25,6 +27,7 @@ export default class DifficultyChoice extends React.Component<Props, State> {
         };
 
         StorageService.isSameDifficultyLevel().then((isSameLevel) => this.setState({isSameLevel}));
+        StorageService.isScoreComputed().then((isScoreComputed) => this.isScoreComputed = isScoreComputed);
     }
 
     launchMission(difficultyLevel: DifficultyLevel) {
@@ -34,9 +37,9 @@ export default class DifficultyChoice extends React.Component<Props, State> {
         if (game) {
             game.difficultyLevel = difficultyLevel;
         } else {
-            game = new Game(difficultyLevel);
+            game = new Game(difficultyLevel, this.isScoreComputed);
         }
-        navigation.navigate('', {game});
+        navigation.dispatch(StackActions.replace('PlayableInterface', {game}));
     }
 
     render() {
@@ -93,6 +96,7 @@ export default class DifficultyChoice extends React.Component<Props, State> {
 const styles = StyleSheet.create({
     main_container: {
         flex: 1,
+        backgroundColor: Colors.BLACK,
         justifyContent: 'center',
         alignItems: 'center'
     },

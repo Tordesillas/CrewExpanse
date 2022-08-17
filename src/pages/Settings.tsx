@@ -75,7 +75,8 @@ export default class Settings extends React.Component<Props, State> {
 
 const styles = StyleSheet.create({
     main_container: {
-        flex: 1
+        flex: 1,
+        backgroundColor: Colors.BLACK
     },
     title: {
         paddingTop: 50,

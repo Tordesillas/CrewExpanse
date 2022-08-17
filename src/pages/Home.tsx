@@ -49,7 +49,8 @@ export default class Home extends React.Component<Props> {
 
 const styles = StyleSheet.create({
     main_container: {
-        flex: 1
+        flex: 1,
+        backgroundColor: Colors.BLACK
     },
     title: {
         paddingTop: 50,
