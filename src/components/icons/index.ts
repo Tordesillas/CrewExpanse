@@ -8,3 +8,4 @@ export {Close} from './Close';
 export {Next} from './Next';
 export {Retry} from './Retry';
 export {DistressSignal} from './DistressSignal';
+export {Astronaut} from './Astronaut';

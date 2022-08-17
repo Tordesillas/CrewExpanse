@@ -1,17 +1,20 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
-import {NavigationProp} from '@react-navigation/native';
+import {NavigationProp, RouteProp, StackActions} from '@react-navigation/native';
 import {Background, CornerButton} from '../components';
-import {Cogs, Play, SpaceShip} from '../components/icons';
+import {Astronaut, Cogs, Play} from '../components/icons';
+import Game from '../models/Game';
 import {Colors} from '../utils';
 
 interface Props {
     navigation: NavigationProp<any>;
+    route: RouteProp<{params: {game: Game}}>;
 }
 
-export default class Home extends React.Component<Props> {
+export default class EndScreen extends React.Component<Props> {
     render() {
-        const {navigation} = this.props;
+        const {navigation, route} = this.props;
+        const {game} = route.params;
 
         return (
             <View style={styles.main_container}>
@@ -20,19 +23,18 @@ export default class Home extends React.Component<Props> {
                 <Text style={styles.title}>CrewExpanse</Text>
 
                 <View style={styles.main_content}>
-                    <SpaceShip size={90}/>
-                    <View style={styles.main_text_wrapper}>
-                        <Text style={styles.main_text}>
-                            Votre équipage est au complet ?{'\n'}
-                            Les cartes du jeu The Crew sont distribuées ?{'\n'}
-                            Améliorez dès maintenant votre expérience The Crew avec de nouveaux objectifs !
+                    <Text style={styles.subtitle}>Mission terminée !</Text>
+                    <Astronaut size={90}/>
+                    {(game.score !== null) && (
+                        <Text style={styles.text}>
+                            {`${game.score} point${game.score < 2 ? '' : 's'} en ${game.getMissionsCount()} mission${game.getMissionsCount() === 1 ? '' : 's'}`}
                         </Text>
-                    </View>
+                    )}
                 </View>
 
                 <CornerButton
                     icon={<Play size={50}/>}
-                    onPress={() => navigation.navigate('DifficultyChoice')}
+                    onPress={() => navigation.dispatch(StackActions.replace('DifficultyChoice'))}
                     important
                     left
                 />
@@ -66,10 +68,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 150
     },
-    main_text_wrapper: {
-        padding: 30,
+    subtitle: {
+        marginBottom: 50,
+        fontSize: 22,
+        color: Colors.WHITE
     },
-    main_text: {
+    text: {
+        marginTop: 50,
         fontSize: 14,
         color: Colors.WHITE
     }

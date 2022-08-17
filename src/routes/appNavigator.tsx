@@ -5,6 +5,7 @@ import Home from '../pages/Home';
 import Settings from '../pages/Settings';
 import DifficultyChoice from '../pages/DifficultyChoice';
 import PlayableInterface from '../pages/PlayableInterface';
+import EndScreen from '../pages/EndScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -32,6 +33,10 @@ export default function AppNavigator() {
                 <Stack.Screen
                     name='PlayableInterface'
                     component={PlayableInterface}
+                />
+                <Stack.Screen
+                    name='EndScreen'
+                    component={EndScreen}
                 />
             </Stack.Navigator>
         </NavigationContainer>

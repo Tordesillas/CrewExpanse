@@ -26,8 +26,7 @@ export default class PlayableInterface extends React.Component<Props, State> {
         const {game} = props.route.params;
         const newMission = game.pickNewMission();
         if (!newMission) {
-            //props.navigation.navigate('EndScreen', {game}); TODO
-            props.navigation.navigate('Home');
+            props.navigation.dispatch(StackActions.replace('EndScreen', {game}));
         }
 
         this.state = {
@@ -74,7 +73,7 @@ export default class PlayableInterface extends React.Component<Props, State> {
             <SafeAreaView style={styles.main_container}>
                 <Background/>
 
-                <TouchableOpacity style={styles.close_button} onPress={() => navigation.goBack() /* TODO navigation.replace('EndScreen') */}>
+                <TouchableOpacity style={styles.close_button} onPress={() => navigation.dispatch(StackActions.replace('EndScreen', {game}))}>
                     <Close size={20}/>
                 </TouchableOpacity>
 
