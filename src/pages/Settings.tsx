@@ -1,8 +1,8 @@
 import React from 'react';
-import {Linking, StyleSheet, Text, View} from 'react-native';
+import {Linking, StyleSheet, View} from 'react-native';
 import {NavigationProp} from '@react-navigation/native';
 import {Background, Button, CheckboxButton, CornerButton} from '../components';
-import {Book, LeftArrow} from '../components/icons';
+import {Book, CrewExpanse, LeftArrow} from '../components/icons';
 import StorageService from '../services/StorageService';
 import {Colors} from '../utils';
 
@@ -36,7 +36,7 @@ export default class Settings extends React.Component<Props, State> {
             <View style={styles.main_container}>
                 <Background/>
 
-                <Text style={styles.title}>CrewExpanse</Text>
+                <CrewExpanse/>
 
                 <View style={styles.main_content}>
                     <CheckboxButton
@@ -77,14 +77,6 @@ const styles = StyleSheet.create({
     main_container: {
         flex: 1,
         backgroundColor: Colors.BLACK
-    },
-    title: {
-        paddingTop: 50,
-        paddingBottom: 30,
-        width: '100%',
-        textAlign: 'center',
-        fontSize: 50,
-        color: Colors.BLUE
     },
     main_content: {
         flex: 1,

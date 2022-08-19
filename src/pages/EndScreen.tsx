@@ -2,7 +2,7 @@ import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {NavigationProp, RouteProp, StackActions} from '@react-navigation/native';
 import {Background, CornerButton} from '../components';
-import {Astronaut, Cogs, Play} from '../components/icons';
+import {Astronaut, Cogs, CrewExpanse, Play} from '../components/icons';
 import Game from '../models/Game';
 import {Colors} from '../utils';
 
@@ -20,7 +20,7 @@ export default class EndScreen extends React.Component<Props> {
             <View style={styles.main_container}>
                 <Background/>
 
-                <Text style={styles.title}>CrewExpanse</Text>
+                <CrewExpanse/>
 
                 <View style={styles.main_content}>
                     <Text style={styles.subtitle}>Mission terminée !</Text>
@@ -53,14 +53,6 @@ const styles = StyleSheet.create({
     main_container: {
         flex: 1,
         backgroundColor: Colors.BLACK
-    },
-    title: {
-        paddingTop: 50,
-        paddingBottom: 30,
-        width: '100%',
-        textAlign: 'center',
-        fontSize: 50,
-        color: Colors.BLUE
     },
     main_content: {
         flex: 1,

@@ -2,7 +2,7 @@ import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {NavigationProp} from '@react-navigation/native';
 import {Background, CornerButton} from '../components';
-import {Cogs, Play, SpaceShip} from '../components/icons';
+import {Cogs, CrewExpanse, Play, SpaceShip} from '../components/icons';
 import {Colors} from '../utils';
 
 interface Props {
@@ -17,7 +17,7 @@ export default class Home extends React.Component<Props> {
             <View style={styles.main_container}>
                 <Background/>
 
-                <Text style={styles.title}>CrewExpanse</Text>
+                <CrewExpanse/>
 
                 <View style={styles.main_content}>
                     <SpaceShip size={90}/>
@@ -52,13 +52,11 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: Colors.BLACK
     },
-    title: {
-        paddingTop: 50,
-        paddingBottom: 30,
+    logo: {
         width: '100%',
-        textAlign: 'center',
-        fontSize: 50,
-        color: Colors.BLUE
+      //  height: 100,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     main_content: {
         flex: 1,

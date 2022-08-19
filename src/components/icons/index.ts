@@ -22,3 +22,4 @@ export {TokenArrow2} from './TokenArrow2';
 export {TokenArrow3} from './TokenArrow3';
 export {TokenArrow4} from './TokenArrow4';
 export {Card} from './Card';
+export {CrewExpanse} from './CrewExpanse';
