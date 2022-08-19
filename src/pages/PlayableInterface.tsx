@@ -1,8 +1,16 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import {SafeAreaView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {NavigationProp, RouteProp, StackActions} from '@react-navigation/native';
 import {Background, CornerButton} from '../components';
-import {Close, DistressSignal, Next, Retry, SpaceShip} from '../components/icons';
+import {
+    Close,
+    CommunicationToken,
+    DistressSignal,
+    Next,
+    Retry,
+    SpaceShip,
+    Card, TokenArrow1, TokenArrow2, TokenArrow3,
+} from "../components/icons";
 import StorageService from '../services/StorageService';
 import Game from '../models/Game';
 import Mission from '../models/Mission';
@@ -64,6 +72,18 @@ export default class PlayableInterface extends React.Component<Props, State> {
         this.setState({distressSignal: !distressSignal, score: game.score});
     }
 
+    renderIconsLine(icons: Array<ReactNode>): ReactNode {
+        return (
+            <View style={styles.icons_line}>
+                {icons.map((icon, i) => (
+                    <View key={i} style={styles.icon}>
+                        {icon}
+                    </View>
+                ))}
+            </View>
+        );
+    }
+
     render() {
         const {navigation, route} = this.props;
         const {mission, score, distressSignal} = this.state;
@@ -93,6 +113,8 @@ export default class PlayableInterface extends React.Component<Props, State> {
 
                 <View style={styles.main_content_wrapper}>
                     <View style={styles.main_content}>
+                        {this.renderIconsLine([<Card number={8}/>])}
+                        {this.renderIconsLine([<TokenArrow1/>, <TokenArrow2/>, <TokenArrow3/>, <CommunicationToken/>])}
                         <Text style={styles.mission_text}>{mission.text}</Text>
                         <Text style={styles.mission_counter}>Mission n°{mission.id}</Text>
                     </View>
@@ -200,12 +222,24 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#DFC8B8',
-        borderRadius: 20
+        borderRadius: 20,
+        elevation: 5,
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        shadowOffset: {width: 0, height: 2}
     },
     mission_text: {
         textAlign: 'center',
         fontSize: 16,
         color: Colors.BLACK
+    },
+    icons_line: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 10
+    },
+    icon: {
+        margin: 2
     },
     mission_counter: {
         position: 'absolute',
