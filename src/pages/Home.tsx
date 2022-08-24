@@ -3,7 +3,7 @@ import {View, StyleSheet, Text} from 'react-native';
 import {NavigationProp} from '@react-navigation/native';
 import {Background, CornerButton} from '../components';
 import {Cogs, CrewExpanse, Play, SpaceShip} from '../components/icons';
-import {Colors} from '../utils';
+import {Colors, Fonts} from '../utils';
 
 interface Props {
     navigation: NavigationProp<any>;
@@ -52,12 +52,6 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: Colors.BLACK
     },
-    logo: {
-        width: '100%',
-      //  height: 100,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
     main_content: {
         flex: 1,
         justifyContent: 'center',
@@ -68,7 +62,8 @@ const styles = StyleSheet.create({
         padding: 30,
     },
     main_text: {
-        fontSize: 14,
+        fontSize: 16,
+        fontFamily: Fonts.Andika.Regular,
         color: Colors.WHITE
     }
 });

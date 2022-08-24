@@ -1,7 +1,7 @@
 import React from 'react';
 import {Pressable, StyleSheet, Text, View} from 'react-native';
 import {Dices, SpaceShip} from './icons';
-import {Colors, DifficultyLevel} from '../utils';
+import {Colors, DifficultyLevel, Fonts} from '../utils';
 
 interface Props {
     onPress: () => void;
@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 16,
+        fontFamily: Fonts.Andika.Regular,
         color: Colors.VERY_DARK_BLUE
     },
     icon_wrapper: {

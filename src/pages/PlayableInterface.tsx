@@ -14,7 +14,7 @@ import {
 import StorageService from '../services/StorageService';
 import Game from '../models/Game';
 import Mission from '../models/Mission';
-import {Colors} from '../utils';
+import {Colors, Fonts} from '../utils';
 
 interface Props {
     navigation: NavigationProp<any>;
@@ -198,6 +198,7 @@ const styles = StyleSheet.create({
         top: 30,
 
         fontSize: 26,
+        fontFamily: Fonts.Andika.Regular,
         color: Colors.VERY_DARK_BLUE
     },
     difficulty: {
@@ -231,6 +232,7 @@ const styles = StyleSheet.create({
     mission_text: {
         textAlign: 'center',
         fontSize: 16,
+        fontFamily: Fonts.Andika.Regular,
         color: Colors.BLACK
     },
     icons_line: {
@@ -247,6 +249,7 @@ const styles = StyleSheet.create({
         right: 10,
 
         fontSize: 12,
+        fontFamily: Fonts.Andika.Regular,
         color: Colors.GREY
     },
     score_tools: {
@@ -265,10 +268,12 @@ const styles = StyleSheet.create({
     },
     score_label: {
         fontSize: 14,
+        fontFamily: Fonts.Andika.Regular,
         color: Colors.WHITE
     },
     score: {
         fontSize: 14,
+        fontFamily: Fonts.Andika.Regular,
         color: Colors.ORANGE
     },
     distress_signal_shape: {

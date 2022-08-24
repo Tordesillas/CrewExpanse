@@ -14,6 +14,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-CrewExpanse-CrewExpanseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-CrewExpanse-CrewExpanseTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		FC117846672D4ACFA9B9309B /* Andika-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 623DDEA491EC4E83A69E1C91 /* Andika-Bold.ttf */; };
+		661A378FF7E24FA5957AD755 /* Andika-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 069EAB1CD31C4594B732875B /* Andika-BoldItalic.ttf */; };
+		162D30D686C9486DAFC7BEC5 /* Andika-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3583C30A245647D5B0819602 /* Andika-Italic.ttf */; };
+		6A4C619D907F4408B187A3C4 /* Andika-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD150E26F8434F4EB3F59A7D /* Andika-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CrewExpanse/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-CrewExpanse-CrewExpanseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrewExpanse-CrewExpanseTests.release.xcconfig"; path = "Target Support Files/Pods-CrewExpanse-CrewExpanseTests/Pods-CrewExpanse-CrewExpanseTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		623DDEA491EC4E83A69E1C91 /* Andika-Bold.ttf */ = {isa = PBXFileReference; name = "Andika-Bold.ttf"; path = "../src/assets/fonts/Andika-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		069EAB1CD31C4594B732875B /* Andika-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Andika-BoldItalic.ttf"; path = "../src/assets/fonts/Andika-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3583C30A245647D5B0819602 /* Andika-Italic.ttf */ = {isa = PBXFileReference; name = "Andika-Italic.ttf"; path = "../src/assets/fonts/Andika-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CD150E26F8434F4EB3F59A7D /* Andika-Regular.ttf */ = {isa = PBXFileReference; name = "Andika-Regular.ttf"; path = "../src/assets/fonts/Andika-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				A7083567F53746B6A78305EA /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +156,18 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		A7083567F53746B6A78305EA /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				623DDEA491EC4E83A69E1C91 /* Andika-Bold.ttf */,
+				069EAB1CD31C4594B732875B /* Andika-BoldItalic.ttf */,
+				3583C30A245647D5B0819602 /* Andika-Italic.ttf */,
+				CD150E26F8434F4EB3F59A7D /* Andika-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -244,6 +265,10 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				FC117846672D4ACFA9B9309B /* Andika-Bold.ttf in Resources */,
+				661A378FF7E24FA5957AD755 /* Andika-BoldItalic.ttf in Resources */,
+				162D30D686C9486DAFC7BEC5 /* Andika-Italic.ttf in Resources */,
+				6A4C619D907F4408B187A3C4 /* Andika-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

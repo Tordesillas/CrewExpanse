@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import Checkbox from './Checkbox';
-import {Colors} from '../utils';
+import {Colors, Fonts} from '../utils';
 
 interface Props {
     value: boolean;
@@ -59,11 +59,14 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 16,
+        fontFamily: Fonts.Andika.Regular,
         color: Colors.WHITE
     },
     subtitle: {
         marginTop: -5,
-        color: Colors.ORANGE,
-        fontStyle: 'italic'
+
+        fontSize: 14,
+        fontFamily: Fonts.Andika.Italic,
+        color: Colors.ORANGE
     }
 });

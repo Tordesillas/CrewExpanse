@@ -5,7 +5,7 @@ import {Background, CheckboxButton, CornerButton, DifficultyLevelButton} from '.
 import {LeftArrow} from '../components/icons';
 import StorageService from '../services/StorageService';
 import Game from '../models/Game';
-import {Colors, DifficultyLevel} from '../utils';
+import {Colors, DifficultyLevel, Fonts} from '../utils';
 
 interface Props {
     navigation: NavigationProp<any>;
@@ -105,6 +105,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         paddingBottom: 40,
         fontSize: 24,
+        fontFamily: Fonts.Andika.Regular,
         color: Colors.WHITE
     },
     buttons_container: {

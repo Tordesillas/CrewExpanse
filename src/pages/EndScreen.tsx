@@ -4,7 +4,7 @@ import {NavigationProp, RouteProp, StackActions} from '@react-navigation/native'
 import {Background, CornerButton} from '../components';
 import {Astronaut, Cogs, CrewExpanse, Play} from '../components/icons';
 import Game from '../models/Game';
-import {Colors} from '../utils';
+import {Colors, Fonts} from '../utils';
 
 interface Props {
     navigation: NavigationProp<any>;
@@ -63,11 +63,13 @@ const styles = StyleSheet.create({
     subtitle: {
         marginBottom: 50,
         fontSize: 22,
+        fontFamily: Fonts.Andika.Regular,
         color: Colors.WHITE
     },
     text: {
         marginTop: 50,
         fontSize: 14,
+        fontFamily: Fonts.Andika.Regular,
         color: Colors.WHITE
     }
 });

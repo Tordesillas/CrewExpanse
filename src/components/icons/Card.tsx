@@ -1,6 +1,6 @@
 import React from 'react';
 import Svg, {Path, Text} from 'react-native-svg';
-import {Colors} from '../../utils';
+import {Colors, Fonts} from '../../utils';
 
 interface Props {
     number?: number
@@ -20,6 +20,7 @@ export const Card = (props: Props) => (
         <Text
             fill={Colors.WHITE}
             fontSize="80"
+            fontFamily={Fonts.Andika.Regular}
             fontWeight="bold"
             x="50%"
             y="50%"

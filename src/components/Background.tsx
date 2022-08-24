@@ -35,8 +35,9 @@ export default class Background extends React.Component {
                         fill="url(#grad)"
                     />
 
-                    {[...Array(50)].map(() => (
+                    {[...Array(50)].map((_, i) => (
                         <Circle
+                            key={i}
                             cx={Math.floor(Math.random() * 1000)}
                             cy={Math.floor(Math.random() * 1000)}
                             r={Math.floor(Math.random() * 10) + 1}
