@@ -1,15 +1,16 @@
 import React, {ReactNode} from 'react';
 import {SafeAreaView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {NavigationProp, RouteProp, StackActions} from '@react-navigation/native';
+import StyledText from 'react-native-styled-text';
 import {Background, CornerButton} from '../components';
 import {
     Close,
-    CommunicationToken,
     DistressSignal,
     Next,
     Retry,
     SpaceShip,
     Card, TokenArrow1, TokenArrow2, TokenArrow3,
+    NoCommunication, Ones, Player, Slash, Balance,
 } from "../components/icons";
 import StorageService from '../services/StorageService';
 import Game from '../models/Game';
@@ -113,9 +114,11 @@ export default class PlayableInterface extends React.Component<Props, State> {
 
                 <View style={styles.main_content_wrapper}>
                     <View style={styles.main_content}>
-                        {this.renderIconsLine([<Card number={8}/>])}
-                        {this.renderIconsLine([<TokenArrow1/>, <TokenArrow2/>, <TokenArrow3/>, <CommunicationToken/>])}
-                        <Text style={styles.mission_text}>{mission.text}</Text>
+                        {this.renderIconsLine([<Card number={8}/>, <Ones/>])}
+                        {this.renderIconsLine([<NoCommunication/>, <Slash/>, <Player/>, <TokenArrow1/>, <TokenArrow2/>, <TokenArrow3/>, <Balance/>])}
+                        <StyledText style={styles.mission_text} textStyles={textStyles}>
+                            {mission.text}
+                        </StyledText>
                         <Text style={styles.mission_counter}>Mission n°{mission.id}</Text>
                     </View>
                 </View>
@@ -169,6 +172,7 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.BLACK
     },
     close_button: {
+        width: 62,
         padding: 20
     },
     missions_counter: {
@@ -181,7 +185,7 @@ const styles = StyleSheet.create({
     square: {
         height: 80,
         width: 60,
-        backgroundColor: Colors.BLUE
+        backgroundColor: Colors.LIGHT_CYAN
     },
     triangle: {
         height: 0,
@@ -189,7 +193,7 @@ const styles = StyleSheet.create({
         borderTopWidth: 15,
         borderRightWidth: 30,
         borderLeftWidth: 30,
-        borderTopColor: Colors.BLUE,
+        borderTopColor: Colors.LIGHT_CYAN,
         borderRightColor: 'transparent',
         borderLeftColor: 'transparent'
     },
@@ -198,8 +202,8 @@ const styles = StyleSheet.create({
         top: 30,
 
         fontSize: 26,
-        fontFamily: Fonts.Andika.Regular,
-        color: Colors.VERY_DARK_BLUE
+        fontFamily: Fonts.Andika.Bold,
+        color: Colors.DARK_CYAN
     },
     difficulty: {
         position: 'absolute',
@@ -213,8 +217,8 @@ const styles = StyleSheet.create({
     main_content_wrapper: {
         width: '100%',
         aspectRatio: 1,
-        padding: 20,
-        marginTop: 5
+        padding: 10,
+        marginTop: 20
     },
     main_content: {
         flex: 1,
@@ -245,8 +249,8 @@ const styles = StyleSheet.create({
     },
     mission_counter: {
         position: 'absolute',
-        bottom: 2,
-        right: 10,
+        bottom: 0,
+        right: 12,
 
         fontSize: 12,
         fontFamily: Fonts.Andika.Regular,
@@ -264,7 +268,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15,
         borderRadius: 5,
         borderWidth: 2,
-        borderColor: Colors.BLUE
+        borderColor: Colors.LIGHT_CYAN
     },
     score_label: {
         fontSize: 14,
@@ -284,5 +288,29 @@ const styles = StyleSheet.create({
         borderColor: Colors.GREEN,
         justifyContent: 'center',
         alignItems: 'center'
+    }
+});
+
+const textStyles = StyleSheet.create({
+    fi: {
+        fontFamily: Fonts.Andika.Italic
+    },
+    fb: {
+        fontFamily: Fonts.Andika.Bold
+    },
+    fbi: {
+        fontFamily: Fonts.Andika.BoldItalic
+    },
+    cp: {
+        color: Colors.DARK_PINK
+    },
+    cb: {
+        color: Colors.DARK_BLUE
+    },
+    cg: {
+        color: Colors.DARK_OLIVE
+    },
+    cy: {
+        color: Colors.DARK_YELLOW
     }
 });

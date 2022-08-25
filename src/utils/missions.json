@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "mission": "Pour chaque pli, le membre d'équipage qui fait l'ouverture, pose deux cartes face cachée devant lui (face visible pour celle ayant été communiquée par la Radio) et les autres membres choisissent au hasard l'une d'entre elles.",
+    "mission": "Pour <cg>chaque</cg> <fb>pli</fb>, <cb>le membre d'équipage</cb> qui fait l'ouverture, <cp>pose deux cartes</cp> face cachée devant lui <fi>(face visible pour celle ayant été communiquée par la Radio)</fi> et les autres membres choisissent <cy>au hasard</cy> l'une d'entre elles.",
     "level": 1
   },
   {
     "id": 2,
-    "mission": "Faire ceci cela 2",
+    "mission": "L'équipage doit accomplir cinq Tâches. De plus, pour chaque pli, le membre d'équipage qui fait l'ouverture pose deux cartes face cachée devant lui et les autres membres choisissent au hasard l'une d'entre elles. En plus, une fois qu'un membre d'équipage a ouvert le pli avec une carte face visible, les autres membres d'équipage jouent chacun leur tour leurs cartes face cachée et révèlent une fois que tout le monde a posé. Dans les deux cas, si une carte révélée par la Radio est choisie, elle reste face visible.",
     "level": 2
   },
   {

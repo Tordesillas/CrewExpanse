@@ -42,12 +42,12 @@ const styles = StyleSheet.create({
     main_button: {
         flex: 1,
         borderRadius: 150,
-        backgroundColor: Colors.BLUE
+        backgroundColor: Colors.LIGHT_CYAN
     },
     secondary_button: {
         flex: 1,
         borderRadius: 150,
-        borderColor: Colors.BLUE,
+        borderColor: Colors.LIGHT_CYAN,
         borderWidth: 4
     },
     icon_wrapper_left: {

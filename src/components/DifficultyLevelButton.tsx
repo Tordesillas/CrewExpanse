@@ -60,12 +60,12 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         alignItems: 'center',
         flexDirection: 'row',
-        backgroundColor: Colors.BLUE
+        backgroundColor: Colors.LIGHT_CYAN
     },
     text: {
         fontSize: 16,
         fontFamily: Fonts.Andika.Regular,
-        color: Colors.VERY_DARK_BLUE
+        color: Colors.DARK_CYAN
     },
     icon_wrapper: {
         paddingLeft: 3

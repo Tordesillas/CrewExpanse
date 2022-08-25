@@ -20,12 +20,12 @@ export const Card = (props: Props) => (
         <Text
             fill={Colors.WHITE}
             fontSize="80"
-            fontFamily={Fonts.Andika.Regular}
-            fontWeight="bold"
+            fontFamily={Fonts.Andika.Bold}
             x="50%"
             y="50%"
             textAnchor="middle"
-            alignmentBaseline="middle"
-        >{props.number}</Text>
+            alignmentBaseline="middle">
+            {props.number}
+        </Text>
     </Svg>
 );

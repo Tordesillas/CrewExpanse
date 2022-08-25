@@ -45,12 +45,12 @@ const styles = StyleSheet.create({
     },
     main_button: {
         flexDirection: 'row',
-        backgroundColor: Colors.BLUE
+        backgroundColor: Colors.LIGHT_CYAN
     },
     secondary_button: {
         flexDirection: 'row',
         borderWidth: 2,
-        borderColor: Colors.BLUE
+        borderColor: Colors.LIGHT_CYAN
     },
     text: {
         width: 180,
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
 
         fontSize: 16,
         fontFamily: Fonts.Andika.Regular,
-        color: Colors.VERY_DARK_BLUE
+        color: Colors.DARK_CYAN
     },
     icon_wrapper: {
         paddingRight: 10
