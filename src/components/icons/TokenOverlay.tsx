@@ -1,18 +1,20 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Svg, {Text} from 'react-native-svg';
 import {Close} from './Close';
-import {CommunicationToken} from './CommunicationToken';
 import {Colors, Fonts} from '../../utils';
 
 interface Props {
+    children: ReactNode;
+    width: number;
+    height: number;
     number?: number;
 }
 
-export const NoCommunication = (props: Props) => (
-    <View style={styles.main_container}>
+export const TokenOverlay = (props: Props) => (
+    <View style={{width: props.width, height: props.height}}>
         <View style={styles.component_wrapper}>
-            <CommunicationToken size={36}/>
+            {props.children}
         </View>
         <View style={styles.component_wrapper}>
             {props.number ? (
@@ -37,10 +39,6 @@ export const NoCommunication = (props: Props) => (
 );
 
 const styles = StyleSheet.create({
-    main_container: {
-        width: 36,
-        height: 36
-    },
     component_wrapper: {
         position: 'absolute',
         left: 0,

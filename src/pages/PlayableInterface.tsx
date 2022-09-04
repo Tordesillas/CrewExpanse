@@ -9,8 +9,21 @@ import {
     Next,
     Retry,
     SpaceShip,
-    Card, TokenArrow1, TokenArrow2, TokenArrow3,
-    NoCommunication, Ones, Player, Slash, Balance,
+    Card,
+    TokenArrow1,
+    TokenArrow2,
+    TokenArrow3,
+    TokenOverlay,
+    Ones,
+    Player,
+    Slash,
+    Balance,
+    TransparentTexture,
+    Commander,
+    YellowCard,
+    GreenCard,
+    PinkCard,
+    BlueCard, CommunicationToken, AllColorCards, GiveLeft, Hand, ThreeCards, OverlayCards, OverlayCommunicationTokens,
 } from "../components/icons";
 import StorageService from '../services/StorageService';
 import Game from '../models/Game';
@@ -114,8 +127,11 @@ export default class PlayableInterface extends React.Component<Props, State> {
 
                 <View style={styles.main_content_wrapper}>
                     <View style={styles.main_content}>
-                        {this.renderIconsLine([<Card number={8}/>, <Ones/>])}
-                        {this.renderIconsLine([<NoCommunication/>, <Slash/>, <Player/>, <TokenArrow1/>, <TokenArrow2/>, <TokenArrow3/>, <Balance/>])}
+                        <View style={StyleSheet.absoluteFill}>
+                            <TransparentTexture/>
+                        </View>
+                        {this.renderIconsLine([<Card number={8} color={Colors.GREY}/>])}
+                        {this.renderIconsLine([<OverlayCards/>, <CommunicationToken/>, <OverlayCommunicationTokens/>])}
                         <StyledText style={styles.mission_text} textStyles={textStyles}>
                             {mission.text}
                         </StyledText>
