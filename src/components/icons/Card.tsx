@@ -3,9 +3,9 @@ import Svg, {Path, Text} from 'react-native-svg';
 import {Colors, Fonts} from '../../utils';
 
 interface Props {
-    number?: number;
+    number?: string | null;
     height?: number;
-    color?: string;
+    color?: string | null;
 }
 
 export const Card = (props: Props) => (
@@ -18,15 +18,17 @@ export const Card = (props: Props) => (
             fill={props.color || "#17428b"}
             d="M20.36 8.47c2.79-.87 5.75-.73 8.64-.74 26.34.08 52.68-.07 79.02.07 8.3.22 15.33 7.91 14.98 16.18-.01 47.38.04 94.75-.03 142.12 0 8.07-7.04 15.28-15.11 15.45-27.66.08-55.33.03-82.99.02-8.27.1-15.64-7.19-15.65-15.46-.06-47.4-.02-94.79-.02-142.19-.2-6.88 4.54-13.5 11.16-15.45Z"
         />
-        <Text
-            fill={Colors.WHITE}
-            fontSize="80"
-            fontFamily={Fonts.Andika.Bold}
-            x="50%"
-            y="50%"
-            textAnchor="middle"
-            alignmentBaseline="middle">
-            {props.number}
-        </Text>
+        {props.number && (
+            <Text
+                fill={Colors.WHITE}
+                fontSize="80"
+                fontFamily={Fonts.Andika.Bold}
+                x="50%"
+                y="50%"
+                textAnchor="middle"
+                alignmentBaseline="middle">
+                {props.number}
+            </Text>
+        )}
     </Svg>
 );

@@ -8,7 +8,7 @@ interface Props {
     children: ReactNode;
     width: number;
     height: number;
-    number?: number;
+    number?: string;
 }
 
 export const TokenOverlay = (props: Props) => (

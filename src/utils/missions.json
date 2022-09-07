@@ -1,27 +1,37 @@
 [
   {
     "id": 1,
-    "mission": "Pour <cg>chaque</cg> <fb>pli</fb>, <cb>le membre d'équipage</cb> qui fait l'ouverture, <cp>pose deux cartes</cp> face cachée devant lui <fi>(face visible pour celle ayant été communiquée par la Radio)</fi> et les autres membres choisissent <cy>au hasard</cy> l'une d'entre elles.",
-    "level": 1
+    "fr": "Pour <cg>chaque</cg> <fb>pli</fb>, <cb>le membre d'équipage</cb> qui fait l'ouverture, <cp>pose deux cartes</cp> face cachée devant lui <fi>(face visible pour celle ayant été communiquée par la Radio)</fi> et les autres membres choisissent <cy>au hasard</cy> l'une d'entre elles.",
+    "level": 1,
+    "primary_icons": ["card10"],
+    "secondary_icons": ["commander", "arrowLeft", "yellowCard"]
   },
   {
     "id": 2,
-    "mission": "L'équipage doit accomplir cinq Tâches. De plus, pour chaque pli, le membre d'équipage qui fait l'ouverture pose deux cartes face cachée devant lui et les autres membres choisissent au hasard l'une d'entre elles. En plus, une fois qu'un membre d'équipage a ouvert le pli avec une carte face visible, les autres membres d'équipage jouent chacun leur tour leurs cartes face cachée et révèlent une fois que tout le monde a posé. Dans les deux cas, si une carte révélée par la Radio est choisie, elle reste face visible.",
-    "level": 2
+    "fr": "L'équipage doit accomplir cinq Tâches. De plus, pour chaque pli, le membre d'équipage qui fait l'ouverture pose deux cartes face cachée devant lui et les autres membres choisissent au hasard l'une d'entre elles. En plus, une fois qu'un membre d'équipage a ouvert le pli avec une carte face visible, les autres membres d'équipage jouent chacun leur tour leurs cartes face cachée et révèlent une fois que tout le monde a posé. Dans les deux cas, si une carte révélée par la Radio est choisie, elle reste face visible.",
+    "level": 2,
+    "primary_icons": [],
+    "secondary_icons": []
   },
   {
     "id": 3,
-    "mission": "Faire ceci cela 3",
-    "level": 3
+    "fr": "Faire ceci cela 3",
+    "level": 3,
+    "primary_icons": [],
+    "secondary_icons": []
   },
   {
     "id": 4,
-    "mission": "Faire ceci cela 4",
-    "level": 3
+    "fr": "Faire ceci cela 4",
+    "level": 3,
+    "primary_icons": [],
+    "secondary_icons": []
   },
   {
     "id": 5,
-    "mission": "Faire ceci cela 5",
-    "level": 3
+    "fr": "Faire ceci cela 5",
+    "level": 3,
+    "primary_icons": [],
+    "secondary_icons": []
   }
 ]

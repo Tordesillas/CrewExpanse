@@ -4,7 +4,6 @@ import {Colors} from '../../utils';
 
 interface Props {
     size?: number;
-    color?: string;
 }
 
 export const Hand = (props: Props) => (

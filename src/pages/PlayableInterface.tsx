@@ -3,31 +3,11 @@ import {SafeAreaView, StyleSheet, Text, TouchableOpacity, View} from 'react-nati
 import {NavigationProp, RouteProp, StackActions} from '@react-navigation/native';
 import StyledText from 'react-native-styled-text';
 import {Background, CornerButton} from '../components';
-import {
-    Close,
-    DistressSignal,
-    Next,
-    Retry,
-    SpaceShip,
-    Card,
-    TokenArrow1,
-    TokenArrow2,
-    TokenArrow3,
-    TokenOverlay,
-    Ones,
-    Player,
-    Slash,
-    Balance,
-    TransparentTexture,
-    Commander,
-    YellowCard,
-    GreenCard,
-    PinkCard,
-    BlueCard, CommunicationToken, AllColorCards, GiveLeft, Hand, ThreeCards, OverlayCards, OverlayCommunicationTokens,
-} from "../components/icons";
+import {Close, DistressSignal, Next, Retry, SpaceShip, TransparentTexture} from '../components/icons';
 import StorageService from '../services/StorageService';
 import Game from '../models/Game';
 import Mission from '../models/Mission';
+import MissionsFactory from '../models/MissionsFactory';
 import {Colors, Fonts} from '../utils';
 
 interface Props {
@@ -52,7 +32,7 @@ export default class PlayableInterface extends React.Component<Props, State> {
         }
 
         this.state = {
-            mission: newMission || new Mission('', 0, 0),
+            mission: newMission || new Mission('', 0, 0, [], []),
             score: game.score,
             distressSignal: false
         };
@@ -86,12 +66,12 @@ export default class PlayableInterface extends React.Component<Props, State> {
         this.setState({distressSignal: !distressSignal, score: game.score});
     }
 
-    renderIconsLine(icons: Array<ReactNode>): ReactNode {
+    renderIconsLine(icons: Array<string>): ReactNode {
         return (
             <View style={styles.icons_line}>
                 {icons.map((icon, i) => (
                     <View key={i} style={styles.icon}>
-                        {icon}
+                        {MissionsFactory.generateObjectiveIcon(icon)}
                     </View>
                 ))}
             </View>
@@ -130,8 +110,8 @@ export default class PlayableInterface extends React.Component<Props, State> {
                         <View style={StyleSheet.absoluteFill}>
                             <TransparentTexture/>
                         </View>
-                        {this.renderIconsLine([<Card number={8} color={Colors.GREY}/>])}
-                        {this.renderIconsLine([<OverlayCards/>, <CommunicationToken/>, <OverlayCommunicationTokens/>])}
+                        {this.renderIconsLine(mission.primaryIcons)}
+                        {this.renderIconsLine(mission.secondaryIcons)}
                         <StyledText style={styles.mission_text} textStyles={textStyles}>
                             {mission.text}
                         </StyledText>

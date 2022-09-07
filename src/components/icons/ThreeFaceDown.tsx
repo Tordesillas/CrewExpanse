@@ -5,7 +5,7 @@ interface Props {
     size?: number;
 }
 
-export const ThreeCards = (props: Props) => (
+export const ThreeFaceDown = (props: Props) => (
     <Svg width={props.size || 35} height={props.size || 40} viewBox="0 0 157 210">
         <Path
             fill="#fff"

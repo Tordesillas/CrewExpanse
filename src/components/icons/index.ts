@@ -39,6 +39,6 @@ export {BlueCard} from './BlueCard';
 export {AllColorCards} from './AllColorCards';
 export {GiveLeft} from './GiveLeft';
 export {Hand} from './Hand';
-export {ThreeCards} from './ThreeCards';
+export {ThreeFaceDown} from './ThreeFaceDown';
 export {OverlayCards} from './OverlayCards';
 export {OverlayCommunicationTokens} from './OverlayCommunicationTokens';
