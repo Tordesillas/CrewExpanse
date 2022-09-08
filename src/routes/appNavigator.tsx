@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import BootSplash from 'react-native-bootsplash';
 import Home from '../pages/Home';
 import Settings from '../pages/Settings';
 import DifficultyChoice from '../pages/DifficultyChoice';
@@ -11,7 +12,7 @@ const Stack = createNativeStackNavigator();
 
 export default function AppNavigator() {
     return (
-        <NavigationContainer>
+        <NavigationContainer onReady={() => BootSplash.hide({fade: true})}>
             <Stack.Navigator
                 initialRouteName='Home'
                 screenOptions={{
