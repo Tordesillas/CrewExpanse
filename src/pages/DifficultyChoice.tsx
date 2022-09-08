@@ -112,7 +112,9 @@ const styles = StyleSheet.create({
         width: '60%'
     },
     switch_button: {
-        paddingTop: 20,
-        paddingHorizontal: 30
+        paddingVertical: 10,
+        paddingHorizontal: 30,
+        width: '100%',
+        alignItems: 'center'
     }
 });
