@@ -66,7 +66,9 @@ export default class PlayableInterface extends React.Component<Props, State> {
         this.setState({distressSignal: !distressSignal, score: game.score});
     }
 
-    renderIconsLine(icons: Array<string>): ReactNode {
+    renderIconsLine(icons: Array<string>): ReactNode | null {
+        if (!icons.length) return null;
+
         return (
             <View style={styles.icons_line}>
                 {icons.map((icon, i) => (
