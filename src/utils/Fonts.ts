@@ -3,6 +3,6 @@ export default {
         Bold: 'Andika-Bold',
         BoldItalic: 'Andika-BoldItalic',
         Italic: 'Andika-Italic',
-        Regular: 'Andika-Regular'
+        Regular: 'Andika'
     }
 }
