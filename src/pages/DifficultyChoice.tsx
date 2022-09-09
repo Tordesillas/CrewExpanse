@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, SafeAreaView, StyleSheet, Text} from 'react-native';
 import {NavigationProp, RouteProp, StackActions} from '@react-navigation/native';
 import {Background, CheckboxButton, CornerButton, DifficultyLevelButton} from '../components';
 import {LeftArrow} from '../components/icons';
@@ -47,7 +47,7 @@ export default class DifficultyChoice extends React.Component<Props, State> {
         const {isSameLevel} = this.state;
 
         return (
-            <View style={styles.main_container}>
+            <SafeAreaView style={styles.main_container}>
                 <Background/>
 
                 <Text style={styles.title}>Niveaux de difficulté</Text>
@@ -88,7 +88,7 @@ export default class DifficultyChoice extends React.Component<Props, State> {
                         important={false}
                     />
                 )}
-            </View>
+            </SafeAreaView>
         );
     }
 }
@@ -98,7 +98,8 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: Colors.BLACK,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        overflow: 'hidden'
     },
     title: {
         width: '100%',

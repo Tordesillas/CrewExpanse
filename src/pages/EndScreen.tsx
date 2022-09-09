@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, SafeAreaView, StyleSheet, Text} from 'react-native';
 import {NavigationProp, RouteProp, StackActions} from '@react-navigation/native';
 import {Background, CornerButton} from '../components';
 import {Astronaut, Cogs, CrewExpanse, Play} from '../components/icons';
@@ -17,7 +17,7 @@ export default class EndScreen extends React.Component<Props> {
         const {game} = route.params;
 
         return (
-            <View style={styles.main_container}>
+            <SafeAreaView style={styles.main_container}>
                 <Background/>
 
                 <CrewExpanse/>
@@ -44,7 +44,7 @@ export default class EndScreen extends React.Component<Props> {
                     important={false}
                     left={false}
                 />
-            </View>
+            </SafeAreaView>
         );
     }
 }
@@ -52,7 +52,8 @@ export default class EndScreen extends React.Component<Props> {
 const styles = StyleSheet.create({
     main_container: {
         flex: 1,
-        backgroundColor: Colors.BLACK
+        backgroundColor: Colors.BLACK,
+        overflow: 'hidden'
     },
     main_content: {
         flex: 1,

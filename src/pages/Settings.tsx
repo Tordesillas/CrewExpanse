@@ -1,5 +1,5 @@
 import React from 'react';
-import {Linking, StyleSheet, View} from 'react-native';
+import {Linking, SafeAreaView, StyleSheet, View} from 'react-native';
 import {NavigationProp} from '@react-navigation/native';
 import {Background, Button, CheckboxButton, CornerButton} from '../components';
 import {Book, CrewExpanse, LeftArrow} from '../components/icons';
@@ -33,12 +33,12 @@ export default class Settings extends React.Component<Props, State> {
         const {isSameLevel, isScoreComputed} = this.state;
 
         return (
-            <View style={styles.main_container}>
+            <SafeAreaView style={styles.main_container}>
                 <Background/>
 
                 <CrewExpanse/>
 
-                <View style={styles.main_content}>
+                <View style={styles.options}>
                     <CheckboxButton
                         value={isSameLevel}
                         onValueChange={(newValue) => this.setState({isSameLevel: newValue},
@@ -53,13 +53,14 @@ export default class Settings extends React.Component<Props, State> {
                         title={"Calcul du score"}
                         subtitle={"Si l'option est cochée, une interface qui gère le score sera ajoutée durant les missions."}
                     />
-                    <View style={styles.button_wrapper}>
-                        <Button
-                            text={"Manuel du jeu"}
-                            onPress={() => Linking.openURL('https://iello.fr/wp-content/uploads/2020/05/The-Crew_Rulebook.pdf')}
-                            icon={<Book/>}
-                        />
-                    </View>
+                </View>
+
+                <View style={styles.button_wrapper}>
+                    <Button
+                        text={"Manuel du jeu"}
+                        onPress={() => Linking.openURL('https://iello.fr/wp-content/uploads/2020/05/The-Crew_Rulebook.pdf')}
+                        icon={<Book/>}
+                    />
                 </View>
 
                 <CornerButton
@@ -68,7 +69,7 @@ export default class Settings extends React.Component<Props, State> {
                     left
                     important={false}
                 />
-            </View>
+            </SafeAreaView>
         );
     }
 }
@@ -76,14 +77,16 @@ export default class Settings extends React.Component<Props, State> {
 const styles = StyleSheet.create({
     main_container: {
         flex: 1,
-        backgroundColor: Colors.BLACK
+        backgroundColor: Colors.BLACK,
+        overflow: 'hidden'
     },
-    main_content: {
+    options: {
         flex: 1,
         paddingHorizontal: 30
     },
     button_wrapper: {
         alignItems: 'center',
-        paddingVertical: 10
+        paddingVertical: 10,
+        marginBottom: 150
     }
 });

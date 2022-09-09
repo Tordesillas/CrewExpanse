@@ -89,37 +89,56 @@ export default class PlayableInterface extends React.Component<Props, State> {
             <SafeAreaView style={styles.main_container}>
                 <Background/>
 
-                <TouchableOpacity style={styles.close_button} onPress={() => navigation.dispatch(StackActions.replace('EndScreen', {game}))}>
-                    <Close size={20}/>
-                </TouchableOpacity>
+                <View style={styles.safe_area}>
+                    <TouchableOpacity style={styles.close_button} onPress={() => navigation.dispatch(StackActions.replace('EndScreen', {game}))}>
+                        <Close size={20}/>
+                    </TouchableOpacity>
 
-               <View style={styles.missions_counter}>
-                   <View style={styles.square}/>
-                   <View style={styles.triangle}/>
-                   <Text style={styles.counter}>{game.getMissionsCount()}</Text>
-               </View>
+                    <View style={styles.missions_counter}>
+                        <View style={styles.square}/>
+                        <View style={styles.triangle}/>
+                        <Text style={styles.counter}>{game.getMissionsCount()}</Text>
+                    </View>
 
-                <View style={styles.difficulty}>
-                    {[...Array(['BEGINNER', 'CONFIRMED', 'EXPERT'].indexOf(mission.difficultyLevel) + 1)].map((_, i) => (
-                        <View key={i} style={styles.space_ship_wrapper}>
-                            <SpaceShip color={Colors.ORANGE} size={20}/>
+                    <View style={styles.difficulty}>
+                        {[...Array(['BEGINNER', 'CONFIRMED', 'EXPERT'].indexOf(mission.difficultyLevel) + 1)].map((_, i) => (
+                            <View key={i} style={styles.space_ship_wrapper}>
+                                <SpaceShip color={Colors.ORANGE} size={20}/>
+                            </View>
+                        ))}
+                    </View>
+
+                    <View style={styles.main_content_wrapper}>
+                        <View style={styles.main_content}>
+                            <View style={StyleSheet.absoluteFill}>
+                                <TransparentTexture/>
+                            </View>
+                            {this.renderIconsLine(mission.primaryIcons)}
+                            {this.renderIconsLine(mission.secondaryIcons)}
+                            <StyledText style={styles.mission_text} textStyles={textStyles}>
+                                {mission.text}
+                            </StyledText>
+                            <Text style={styles.mission_counter}>Mission n°{mission.id}</Text>
                         </View>
-                    ))}
-                </View>
-
-                <View style={styles.main_content_wrapper}>
-                    <View style={styles.main_content}>
-                        <View style={StyleSheet.absoluteFill}>
-                            <TransparentTexture/>
-                        </View>
-                        {this.renderIconsLine(mission.primaryIcons)}
-                        {this.renderIconsLine(mission.secondaryIcons)}
-                        <StyledText style={styles.mission_text} textStyles={textStyles}>
-                            {mission.text}
-                        </StyledText>
-                        <Text style={styles.mission_counter}>Mission n°{mission.id}</Text>
                     </View>
                 </View>
+
+                {score !== null && (
+                    <View style={styles.score_tools}>
+                        <View style={styles.score_container}>
+                            <Text style={styles.score_label}>Score</Text>
+                            <View style={{flex: 1}}/>
+                            <Text style={styles.score}>{score}</Text>
+                        </View>
+                        <View style={{flex: 1}}/>
+                        <TouchableOpacity
+                            onPress={() => this.onDistressSignalCalled()}
+                            style={[styles.distress_signal_shape, {borderWidth: distressSignal ? 2 : 0}]}
+                        >
+                            <DistressSignal size={46}/>
+                        </TouchableOpacity>
+                    </View>
+                )}
 
                 {(score === null) ? (
                     <CornerButton
@@ -130,21 +149,6 @@ export default class PlayableInterface extends React.Component<Props, State> {
                     />
                 ) : (
                     <>
-                        <View style={styles.score_tools}>
-                            <View style={styles.score_container}>
-                                <Text style={styles.score_label}>Score</Text>
-                                <View style={{flex: 1}}/>
-                                <Text style={styles.score}>{score}</Text>
-                            </View>
-                            <View style={{flex: 1}}/>
-                            <TouchableOpacity
-                                onPress={() => this.onDistressSignalCalled()}
-                                style={[styles.distress_signal_shape, {borderWidth: distressSignal ? 2 : 0}]}
-                            >
-                                <DistressSignal size={50}/>
-                            </TouchableOpacity>
-                        </View>
-
                         <CornerButton
                             onPress={() => this.newMission()}
                             icon={<Next size={60}/>}
@@ -167,9 +171,14 @@ export default class PlayableInterface extends React.Component<Props, State> {
 const styles = StyleSheet.create({
     main_container: {
         flex: 1,
-        backgroundColor: Colors.BLACK
+        backgroundColor: Colors.BLACK,
+        overflow: 'hidden'
+    },
+    safe_area: {
+        flex: 1
     },
     close_button: {
+        zIndex: 2,
         width: 62,
         padding: 20
     },
@@ -181,7 +190,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     square: {
-        height: 80,
+        height: 70,
         width: 60,
         backgroundColor: Colors.LIGHT_CYAN
     },
@@ -197,7 +206,7 @@ const styles = StyleSheet.create({
     },
     counter: {
         position: 'absolute',
-        top: 30,
+        top: 20,
 
         fontSize: 26,
         fontFamily: Fonts.Andika.Bold,
@@ -216,7 +225,7 @@ const styles = StyleSheet.create({
         width: '100%',
         aspectRatio: 1,
         padding: 10,
-        marginTop: 20
+        marginTop: 10
     },
     main_content: {
         flex: 1,
@@ -255,14 +264,17 @@ const styles = StyleSheet.create({
         color: Colors.GREY
     },
     score_tools: {
+        position: 'absolute',
+        bottom: 160,
+        left: 15,
+        right: 15,
         flexDirection: 'row'
     },
     score_container: {
-        width: '40%',
+        width: '50%',
         alignItems: 'center',
         height: 50,
         flexDirection: 'row',
-        marginHorizontal: 20,
         paddingHorizontal: 15,
         borderRadius: 5,
         borderWidth: 2,
@@ -279,10 +291,9 @@ const styles = StyleSheet.create({
         color: Colors.ORANGE
     },
     distress_signal_shape: {
-        height: 54,
-        marginRight: 20,
+        height: 50,
         aspectRatio: 1,
-        borderRadius: 27,
+        borderRadius: 25,
         borderColor: Colors.GREEN,
         justifyContent: 'center',
         alignItems: 'center'
