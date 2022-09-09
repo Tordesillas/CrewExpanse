@@ -1,5 +1,6 @@
 import React, {ReactNode} from 'react';
-import {Pressable, StyleSheet, View, ViewStyle} from 'react-native';
+import {StyleSheet, View, ViewStyle} from 'react-native';
+import Pressable from './Pressable';
 import {Colors} from '../utils';
 
 interface Props {

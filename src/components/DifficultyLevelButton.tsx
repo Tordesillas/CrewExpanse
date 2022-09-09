@@ -1,6 +1,7 @@
 import React from 'react';
-import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {Dices, SpaceShip} from './icons';
+import Pressable from './Pressable';
 import {Colors, DifficultyLevel, Fonts} from '../utils';
 
 interface Props {
