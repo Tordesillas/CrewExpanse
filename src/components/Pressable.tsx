@@ -1,17 +1,20 @@
-import React, {useCallback} from 'react';
-import {Pressable as RNPressable} from 'react-native';
+import React, {ReactNode} from 'react';
+import {Platform, Pressable as RNPressable, ViewStyle} from 'react-native';
 
-function Pressable({children, style, ...otherProps}: any) {
-    const _style = useCallback(
-        ({pressed}: {pressed: boolean}) => [{opacity: pressed ? 0.5 : 1}, style && style],
-        [style]
-    );
-
-    return (
-        <RNPressable style={_style} {...otherProps}>
-            {children}
-        </RNPressable>
-    );
+interface Props {
+    children?: ReactNode;
+    style?: ViewStyle;
 }
 
-export default Pressable;
+export default class Pressable extends React.Component<Props> {
+    render() {
+        return (
+            <RNPressable
+                {...this.props}
+                style={({pressed}) => [{opacity: (Platform.OS === "ios" && pressed) ? 0.5 : 1}, this.props.style]}
+            >
+                {this.props.children}
+            </RNPressable>
+        );
+    }
+}

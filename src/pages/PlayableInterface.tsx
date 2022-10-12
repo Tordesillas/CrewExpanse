@@ -1,5 +1,5 @@
 import React, {ReactNode} from 'react';
-import {SafeAreaView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {NavigationProp, RouteProp, StackActions} from '@react-navigation/native';
 import StyledText from 'react-native-styled-text';
 import {Background, CornerButton} from '../components';
@@ -115,9 +115,14 @@ export default class PlayableInterface extends React.Component<Props, State> {
                             </View>
                             {this.renderIconsLine(mission.primaryIcons)}
                             {this.renderIconsLine(mission.secondaryIcons)}
-                            <StyledText style={styles.mission_text} textStyles={textStyles}>
-                                {mission.text}
-                            </StyledText>
+                            {mission.primaryIcons?.length > 0 && (
+                                <View style={styles.separator}/>
+                            )}
+                            <ScrollView style={styles.mission_text_wrapper}>
+                                <StyledText style={styles.mission_text} textStyles={textStyles}>
+                                    {mission.text}
+                                </StyledText>
+                            </ScrollView>
                             <Text style={styles.mission_counter}>Mission n°{mission.id}</Text>
                         </View>
                     </View>
@@ -231,7 +236,7 @@ const styles = StyleSheet.create({
         flex: 1,
         aspectRatio: 1,
         padding: 10,
-        justifyContent: 'center',
+        paddingBottom: 20,
         alignItems: 'center',
         backgroundColor: '#DFC8B8',
         borderRadius: 20,
@@ -240,8 +245,16 @@ const styles = StyleSheet.create({
         shadowRadius: 3.84,
         shadowOffset: {width: 0, height: 2}
     },
+    separator: {
+        height: 1,
+        width: '50%',
+        backgroundColor: Colors.DARK_ORANGE,
+        marginTop: 10
+    },
+    mission_text_wrapper: {
+        marginTop: 20
+    },
     mission_text: {
-        textAlign: 'center',
         fontSize: 16,
         fontFamily: Fonts.Andika.Regular,
         color: Colors.BLACK
