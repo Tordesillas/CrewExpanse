@@ -23,14 +23,16 @@ export default class CheckboxButton extends React.Component<Props> {
                     />
                 </View>
 
-                <View style={[styles.text_container, subtitle ? {flex: 1} : undefined]}>
-                    <View style={styles.title_wrapper}>
+                {subtitle ? (
+                    <View style={[styles.text_container, {flex: 1}]}>
+                        <Text style={styles.title}>{title}</Text>
+                        <Text style={styles.subtitle}>{subtitle}</Text>
+                    </View>
+                ) : (
+                    <View style={[styles.text_container, {justifyContent: 'center'}]}>
                         <Text style={styles.title}>{title}</Text>
                     </View>
-                    {subtitle && (
-                        <Text style={styles.subtitle}>{subtitle}</Text>
-                    )}
-                </View>
+                )}
             </View>
         );
     }
@@ -38,7 +40,7 @@ export default class CheckboxButton extends React.Component<Props> {
 
 const styles = StyleSheet.create({
     main_container: {
-        marginBottom: 30,
+        marginBottom: 10,
         flexDirection: 'row'
     },
     checkbox_wrapper: {
@@ -54,7 +56,6 @@ const styles = StyleSheet.create({
     },
     title_wrapper: {
         height: 50,
-        justifyContent: 'center'
     },
     title: {
         fontSize: 16,
@@ -62,9 +63,7 @@ const styles = StyleSheet.create({
         color: Colors.WHITE
     },
     subtitle: {
-        marginTop: -8,
-
-        fontSize: 14,
+        fontSize: 12,
         fontFamily: Fonts.Andika.Italic,
         color: Colors.ORANGE
     }

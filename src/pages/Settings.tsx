@@ -77,7 +77,7 @@ export default class Settings extends React.Component<Props, State> {
 const styles = StyleSheet.create({
     main_container: {
         flex: 1,
-        backgroundColor: Colors.BLACK,
+        backgroundColor: Colors.DARK_CYAN,
         overflow: 'hidden'
     },
     options: {

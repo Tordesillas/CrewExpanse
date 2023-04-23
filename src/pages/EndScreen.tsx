@@ -52,7 +52,7 @@ export default class EndScreen extends React.Component<Props> {
 const styles = StyleSheet.create({
     main_container: {
         flex: 1,
-        backgroundColor: Colors.BLACK,
+        backgroundColor: Colors.DARK_CYAN,
         overflow: 'hidden'
     },
     main_content: {

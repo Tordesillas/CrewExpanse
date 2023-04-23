@@ -176,7 +176,7 @@ export default class PlayableInterface extends React.Component<Props, State> {
 const styles = StyleSheet.create({
     main_container: {
         flex: 1,
-        backgroundColor: Colors.BLACK,
+        backgroundColor: Colors.DARK_CYAN,
         overflow: 'hidden'
     },
     safe_area: {
@@ -235,7 +235,7 @@ const styles = StyleSheet.create({
     main_content: {
         flex: 1,
         aspectRatio: 1,
-        padding: 10,
+        paddingTop: 8,
         paddingBottom: 20,
         alignItems: 'center',
         backgroundColor: '#DFC8B8',
@@ -252,7 +252,8 @@ const styles = StyleSheet.create({
         marginTop: 10
     },
     mission_text_wrapper: {
-        marginTop: 20
+        marginTop: 16,
+        paddingHorizontal: '3%'
     },
     mission_text: {
         fontSize: 16,
@@ -269,7 +270,7 @@ const styles = StyleSheet.create({
     },
     mission_counter: {
         position: 'absolute',
-        bottom: 0,
+        bottom: -1,
         right: 12,
 
         fontSize: 12,

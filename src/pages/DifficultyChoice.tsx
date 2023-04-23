@@ -96,7 +96,7 @@ export default class DifficultyChoice extends React.Component<Props, State> {
 const styles = StyleSheet.create({
     main_container: {
         flex: 1,
-        backgroundColor: Colors.BLACK,
+        backgroundColor: Colors.DARK_CYAN,
         justifyContent: 'center',
         alignItems: 'center',
         overflow: 'hidden'

@@ -1,12 +1,12 @@
 import React, {ReactNode} from 'react';
-import {Platform, Pressable as RNPressable, ViewStyle} from 'react-native';
+import {Platform, Pressable as RNPressable, type PressableProps, ViewStyle} from "react-native";
 
 interface Props {
     children?: ReactNode;
     style?: ViewStyle;
 }
 
-export default class Pressable extends React.Component<Props> {
+export default class Pressable extends React.Component<Props & PressableProps> {
     render() {
         return (
             <RNPressable
