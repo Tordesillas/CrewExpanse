@@ -1,5 +1,5 @@
 import React from 'react';
-import Svg, {Path} from 'react-native-svg';
+import Svg, {Path} from "react-native-svg";
 import {Colors} from '../../utils';
 
 interface Props {
@@ -7,7 +7,7 @@ interface Props {
     color?: string;
 }
 
-export const GiveLeft = (props: Props) => (
+export const ArrowRight = (props: Props) => (
     <Svg width={props.size || 32} height={props.size || 32} viewBox="0 0 542 482">
         <Path
             fill={Colors.CYAN}
@@ -15,7 +15,7 @@ export const GiveLeft = (props: Props) => (
             stroke={Colors.DARK_CYAN}
             strokeWidth={20}
             strokeLinejoin="round"
-            transform="translate(20)"
+            transform="translate(-20 20) rotate(180 271 241)"
         />
     </Svg>
 );

@@ -11,6 +11,7 @@ export default {
     RED: '#D1232A',
     PINK: '#E87CAF',
     DARK_PINK: '#DD3F8A',
+    PURPLE: '#592387',
     BLUE: '#0085CB',
     DARK_BLUE: '#006AA2',
     OLIVE: '#95C11F',

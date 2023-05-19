@@ -335,5 +335,8 @@ const textStyles = StyleSheet.create({
     },
     cy: {
         color: Colors.DARK_YELLOW
+    },
+    cv: {
+        color: Colors.PURPLE
     }
 });

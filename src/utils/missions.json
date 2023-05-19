@@ -1,37 +1,1233 @@
 [
   {
-    "id": 1,
-    "fr": "Pour <cg>chaque</cg> <fb>pli</fb>, <cb>le membre d'équipage</cb> qui fait l'ouverture, <cp>pose deux cartes</cp> face cachée devant lui <fi>(face visible pour celle ayant été communiquée par la Radio)</fi> et les autres membres choisissent <cy>au hasard</cy> l'une d'entre elles.",
+    "id": 101,
+    "fr": "L'équipage doit accomplir 2 objectifs avec les jetons <fb><cv>1</cv></fb> et <fb><cv>2</cv></fb>.",
     "level": 1,
-    "primary_icons": ["card10"],
-    "secondary_icons": ["commander", "arrowLeft", "yellowCard"]
+    "primary_icons": [
+      "card2"
+    ],
+    "secondary_icons": [
+      "t1",
+      "t2"
+    ]
   },
   {
-    "id": 2,
-    "fr": "L'équipage doit accomplir cinq Tâches. De plus, pour chaque pli, le membre d'équipage qui fait l'ouverture pose deux cartes face cachée devant lui et les autres membres choisissent au hasard l'une d'entre elles. En plus, une fois qu'un membre d'équipage a ouvert le pli avec une carte face visible, les autres membres d'équipage jouent chacun leur tour leurs cartes face cachée et révèlent une fois que tout le monde a posé. Dans les deux cas, si une carte révélée par la Radio est choisie, elle reste face visible.",
+    "id": 102,
+    "fr": "L'équipage doit accomplir 3 objectifs.",
+    "level": 1,
+    "primary_icons": [
+      "card3"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 103,
+    "fr": "Le commandant demande à l'équipage si l'un d'eux veut réaliser l'objectif : <fb>ne pas remporter de pli</fb> (répondre par <fi>oui</fi> ou <fi>non</fi>).",
+    "level": 1,
+    "primary_icons": [
+      "commander",
+      "player"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 104,
+    "fr": "L'équipage doit accomplir 3 objectifs avec les jetons <fb><cv>›</cv></fb> et <fb><cv>››</cv></fb>. Silence radio.",
+    "level": 1,
+    "primary_icons": [
+      "card3"
+    ],
+    "secondary_icons": [
+      "ta1",
+      "ta2",
+      "communicationCrossed"
+    ]
+  },
+  {
+    "id": 105,
+    "fr": "L'équipage doit accomplir 3 objectifs avec le jeton <fb><cv>Ω</cv></fb>.",
+    "level": 1,
+    "primary_icons": [
+      "card3"
+    ],
+    "secondary_icons": [
+      "to"
+    ]
+  },
+  {
+    "id": 106,
+    "fr": "L'équipage doit accomplir 3 objectifs avec les jetons <fb><cv>1</cv></fb>, <fb><cv>2</cv></fb> et <fb><cv>3</cv></fb>.",
+    "level": 1,
+    "primary_icons": [
+      "card3"
+    ],
+    "secondary_icons": [
+      "t1",
+      "t2",
+      "t3"
+    ]
+  },
+  {
+    "id": 107,
+    "fr": "Une carte 1 de couleur doit remporter un pli.",
+    "level": 1,
+    "primary_icons": [
+      "ones"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 108,
+    "fr": "L'équipage doit accomplir 4 objectifs.",
+    "level": 1,
+    "primary_icons": [
+      "card4"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 109,
+    "fr": "L'équipage doit accomplir 4 objectifs avec le jeton <fb><cv>1</cv></fb>. Le commandant désigne un membre d'équipage qui ne pourra pas communiquer durant la mission.",
+    "level": 1,
+    "primary_icons": [
+      "card4"
+    ],
+    "secondary_icons": [
+      "t1",
+      "commander",
+      "communicationCrossed",
+      "player"
+    ]
+  },
+  {
+    "id": 110,
+    "fr": "L'équipage doit accomplir 4 objectifs avec le jeton <fb><cv>Ω</cv></fb>. À la fin du premier tour, chacun pioche une carte dans la main de son voisin de droite.",
+    "level": 1,
+    "primary_icons": [
+      "card4"
+    ],
+    "secondary_icons": [
+      "to",
+      "giveCard"
+    ]
+  },
+  {
+    "id": 111,
+    "fr": "Chaque carte fusée doit remporter un pli.",
+    "level": 1,
+    "primary_icons": [
+      "rockets"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 112,
+    "fr": "L'équipage doit accomplir 4 objectifs avec les jetons <fb><cv>›</cv></fb>, <fb><cv>››</cv></fb> et <fb><cv>›››</cv></fb>. Silence radio les trois premiers tours.",
     "level": 2,
-    "primary_icons": [],
-    "secondary_icons": []
+    "primary_icons": [
+      "card4"
+    ],
+    "secondary_icons": [
+      "ta1",
+      "ta2",
+      "ta3",
+      "communication3"
+    ]
   },
   {
-    "id": 3,
-    "fr": "Faire ceci cela 3",
-    "level": 3,
-    "primary_icons": [],
-    "secondary_icons": []
+    "id": 113,
+    "fr": "L'équipage doit accomplir 4 objectifs avec les jetons <fb><cv>1</cv></fb>, <fb><cv>2</cv></fb>, <fb><cv>3</cv></fb> et <fb><cv>4</cv></fb>.",
+    "level": 2,
+    "primary_icons": [
+      "card4"
+    ],
+    "secondary_icons": [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ]
   },
   {
-    "id": 4,
-    "fr": "Faire ceci cela 4",
-    "level": 3,
-    "primary_icons": [],
-    "secondary_icons": []
+    "id": 114,
+    "fr": "Aucune carte 9 de couleur ne doit remporter de pli.",
+    "level": 1,
+    "primary_icons": [
+      "nines"
+    ],
+    "secondary_icons": ""
   },
   {
-    "id": 5,
-    "fr": "Faire ceci cela 5",
+    "id": 115,
+    "fr": "L'équipage doit accomplir 2 objectifs sans qu'aucune carte 9 de couleur ne remporte de pli.",
+    "level": 2,
+    "primary_icons": [
+      "card2",
+      "nines"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 116,
+    "fr": "L'équipage doit accomplir 5 objectifs. Silence radio le premier tour.",
+    "level": 1,
+    "primary_icons": [
+      "card5"
+    ],
+    "secondary_icons": [
+      "communication1"
+    ]
+  },
+  {
+    "id": 117,
+    "fr": "L'équipage doit accomplir 5 objectifs avec le jeton <fb><cv>1</cv></fb>. Silence radio les deux premiers tours.",
+    "level": 2,
+    "primary_icons": [
+      "card5"
+    ],
+    "secondary_icons": [
+      "t1",
+      "communication2"
+    ]
+  },
+  {
+    "id": 118,
+    "fr": "Le commandant demande à l'équipage si l'un d'eux veut réaliser l'objectif : remporter 3 objectifs face cachée (répondre par <fi>oui</fi> ou <fi>non</fi>).",
+    "level": 1,
+    "primary_icons": [
+      "commander",
+      "card3",
+      "player"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 119,
+    "fr": "L'équipage doit accomplir 5 objectifs avec les jetons <fb><cv>1</cv></fb> et <fb><cv>2</cv></fb>. Silence radio.",
+    "level": 2,
+    "primary_icons": [
+      "card5"
+    ],
+    "secondary_icons": [
+      "t1",
+      "t2",
+      "communicationCrossed"
+    ]
+  },
+  {
+    "id": 120,
+    "fr": "L'équipage doit accomplir 5 objectifs avec les jetons <fb><cv>›</cv></fb>, <fb><cv>››</cv></fb>, <fb><cv>›››</cv></fb> et <fb><cv>››››</cv></fb>.",
+    "level": 2,
+    "primary_icons": [
+      "card5"
+    ],
+    "secondary_icons": [
+      "ta1",
+      "ta2",
+      "ta3",
+      "ta4"
+    ]
+  },
+  {
+    "id": 121,
+    "fr": "L'équipage doit accomplir 5 objectifs avec les jetons <fb><cv>1</cv></fb>, <fb><cv>2</cv></fb>, <fb><cv>3</cv></fb>, <fb><cv>4</cv></fb> et <fb><cv>5</cv></fb>. Il est possible d'<fb>échanger 2 jetons</fb>.",
+    "level": 2,
+    "primary_icons": [
+      "card5"
+    ],
+    "secondary_icons": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5"
+    ]
+  },
+  {
+    "id": 122,
+    "fr": "Le commandant retourne successivement 5 objectifs. À tour de rôle, chaque membre d'équipage indique s'il souhaite ou non réaliser l'objectif. Les objectifs doivent être répartis équitablement.",
+    "level": 1,
+    "primary_icons": [
+      "commander",
+      "arrowR",
+      "card5"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 123,
+    "fr": "L'équipage doit accomplir 6 objectifs avec les jetons <fb><cv>›</cv></fb> et <fb><cv>››</cv></fb>. Silence radio.",
+    "level": 2,
+    "primary_icons": [
+      "card6"
+    ],
+    "secondary_icons": [
+      "ta1",
+      "ta2",
+      "communicationCrossed"
+    ]
+  },
+  {
+    "id": 124,
+    "fr": "Deux cartes 1 de couleur doivent remporter un pli.",
     "level": 3,
-    "primary_icons": [],
-    "secondary_icons": []
+    "primary_icons": [
+      "ones"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 125,
+    "fr": "Le commandant demande à l'équipage si l'un d'eux veut réaliser l'objectif : remporter 4 objectifs face cachée (répondre par <fi>oui</fi> ou <fi>non</fi>).",
+    "level": 2,
+    "primary_icons": [
+      "commander",
+      "card4",
+      "player"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 126,
+    "fr": "L'équipage doit accomplir 6 objectifs avec les jetons <fb><cv>1</cv></fb> et <fb><cv>Ω</cv></fb>. Silence radio les deux premiers tours.",
+    "level": 2,
+    "primary_icons": [
+      "card6"
+    ],
+    "secondary_icons": [
+      "t1",
+      "to",
+      "communication2"
+    ]
+  },
+  {
+    "id": 127,
+    "fr": "Durant la mission, aucun membre d'équipage ne doit remporter deux plis de plus qu'un autre membre.",
+    "level": 2,
+    "primary_icons": [
+      "balance"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 128,
+    "fr": "L'équipage doit accomplir 6 objectifs avec les jetons <fb><cv>›</cv></fb>, <fb><cv>››</cv></fb> et <fb><cv>›››</cv></fb>. Silence radio le premier tour.",
+    "level": 2,
+    "primary_icons": [
+      "card6"
+    ],
+    "secondary_icons": [
+      "ta1",
+      "ta2",
+      "ta3",
+      "communication1"
+    ]
+  },
+  {
+    "id": 129,
+    "fr": "L'équipage doit accomplir 6 objectifs avec les jetons <fb><cv>1</cv></fb>, <fb><cv>2</cv></fb> et <fb><cv>3</cv></fb>.",
+    "level": 2,
+    "primary_icons": [
+      "card6"
+    ],
+    "secondary_icons": [
+      "t1",
+      "t2",
+      "t3"
+    ]
+  },
+  {
+    "id": 130,
+    "fr": "Le commandant retourne successivement 8 objectifs. À tour de rôle, chaque membre d'équipage indique s'il souhaite ou non réaliser l'objectif. Les objectifs doivent être répartis équitablement.",
+    "level": 2,
+    "primary_icons": [
+      "commander",
+      "arrowR",
+      "card8"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 131,
+    "fr": "Le commandant demande à l'équipage si l'un d'eux veut réaliser l'objectif : <fb>remporter 1 seul pli</fb> sans utiliser de carte fusée (répondre par <fi>oui</fi> ou <fi>non</fi>).",
+    "level": 1,
+    "primary_icons": [
+      "commander",
+      "player"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 132,
+    "fr": "Durant la mission, aucun membre d'équipage ne doit remporter deux plis de plus qu'un autre membre. Le commandant doit remporter les premier et dernier plis.",
+    "level": 2,
+    "primary_icons": [
+      "balance",
+      "commander"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 133,
+    "fr": "L'équipage doit accomplir 7 objectifs avec les jetons <fb><cv>›</cv></fb>, <fb><cv>››</cv></fb> et <fb><cv>›››</cv></fb>.",
+    "level": 2,
+    "primary_icons": [
+      "card7"
+    ],
+    "secondary_icons": [
+      "ta1",
+      "ta2",
+      "ta3"
+    ]
+  },
+  {
+    "id": 134,
+    "fr": "Le commandant retourne successivement 7 objectifs avec les jetons <fb><cv>1</cv></fb> et <fb><cv>2</cv></fb>. À tour de rôle, chaque membre d'équipage indique s'il souhaite ou non réaliser l'objectif. Les objectifs doivent être répartis équitablement.",
+    "level": 2,
+    "primary_icons": [
+      "commander",
+      "arrowR",
+      "card7"
+    ],
+    "secondary_icons": [
+      "t1",
+      "t2"
+    ]
+  },
+  {
+    "id": 135,
+    "fr": "Le commandant demande à l'équipage si l'un d'eux veut réaliser l'objectif : remporter 5 objectifs face cachée (répondre par <fi>oui</fi> ou <fi>non</fi>).",
+    "level": 2,
+    "primary_icons": [
+      "commander",
+      "card5",
+      "player"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 136,
+    "fr": "L'équipage doit accomplir 8 objectifs. Silence radio les deux premiers tours.",
+    "level": 3,
+    "primary_icons": [
+      "card8"
+    ],
+    "secondary_icons": [
+      "communication2"
+    ]
+  },
+  {
+    "id": 137,
+    "fr": "L'équipage doit accomplir 8 objectifs avec les jetons <fb><cv>›</cv></fb>, <fb><cv>››</cv></fb> et <fb><cv>›››</cv></fb>. Silence radio les deux premiers tours.",
+    "level": 3,
+    "primary_icons": [
+      "card8"
+    ],
+    "secondary_icons": [
+      "ta1",
+      "ta2",
+      "ta3",
+      "communication2"
+    ]
+  },
+  {
+    "id": 138,
+    "fr": "L'équipage doit accomplir 8 objectifs avec les jetons <fb><cv>1</cv></fb>, <fb><cv>2</cv></fb> et <fb><cv>3</cv></fb>. Il est possible d'<fb>échanger un jeton</fb> vers une carte qui n'en a pas.",
+    "level": 3,
+    "primary_icons": [
+      "card8"
+    ],
+    "secondary_icons": [
+      "t1",
+      "t2",
+      "t3"
+    ]
+  },
+  {
+    "id": 139,
+    "fr": "Le commandant demande à l'équipage si l'un d'eux veut réaliser l'objectif : remporter uniquement le premier et le dernier plis (répondre par <fi>oui</fi> ou <fi>non</fi>).",
+    "level": 2,
+    "primary_icons": [
+      "commander",
+      "player"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 140,
+    "fr": "Le commandant retourne successivement 8 objectifs avec les jetons <fb><cv>1</cv></fb> et <fb><cv>2</cv></fb>. À tour de rôle, chaque membre d'équipage indique s'il souhaite ou non réaliser l'objectif. Les objectifs doivent être répartis équitablement.",
+    "level": 3,
+    "primary_icons": [
+      "commander",
+      "arrowR",
+      "card8"
+    ],
+    "secondary_icons": [
+      "t1",
+      "t2"
+    ]
+  },
+  {
+    "id": 141,
+    "fr": "Dans l'ordre croissant, chaque carte fusée doit remporter un pli.",
+    "level": 2,
+    "primary_icons": [
+      "rockets"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 142,
+    "fr": "L'équipage doit accomplir 9 objectifs avec les jetons <fb><cv>›</cv></fb>, <fb><cv>››</cv></fb> et <fb><cv>›››</cv></fb>.",
+    "level": 3,
+    "primary_icons": [
+      "card9"
+    ],
+    "secondary_icons": [
+      "ta1",
+      "ta2",
+      "ta3"
+    ]
+  },
+  {
+    "id": 143,
+    "fr": "Le membre d'équipage situé à gauche de celui qui possède la carte 9 rose doit remporter toutes les <cp>cartes roses</cp>.",
+    "level": 2,
+    "primary_icons": [
+      "arrowL",
+      "pinkCard"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 144,
+    "fr": "L'équipage doit accomplir 10 objectifs.",
+    "level": 3,
+    "primary_icons": [
+      "card10"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 145,
+    "fr": "L'équipage doit accomplir 3 objectifs avec le jeton <fb><cv>Ω</cv></fb>. L'objectif <fb><cv>Ω</cv></fb> doit être réalisé lors du <fb>dernier pli</fb>.",
+    "level": 2,
+    "primary_icons": [
+      "card3"
+    ],
+    "secondary_icons": [
+      "to"
+    ]
+  },
+  {
+    "id": 146,
+    "fr": "L'équipage doit accomplir 10 objectifs avec les jetons <fb><cv>›</cv></fb>, <fb><cv>››</cv></fb> et <fb><cv>›››</cv></fb>.",
+    "level": 3,
+    "primary_icons": [
+      "card10"
+    ],
+    "secondary_icons": [
+      "ta1",
+      "ta2",
+      "ta3"
+    ]
+  },
+  {
+    "id": 147,
+    "fr": "Le commandant demande à chacun de choisir un objectif : l'un d'eux devra remporter les 4 premiers plis tandis qu'un autre devra remporter le dernier pli (répondre par <fi>4 premiers</fi> ou <fi>dernier</fi>).",
+    "level": 2,
+    "primary_icons": [
+      "commander",
+      "player",
+      "player"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 201,
+    "fr": "L'équipage doit accomplir 5 objectifs avec les jetons <fb><cv>1</cv></fb>, <fb><cv>2</cv></fb>, <fb><cv>3</cv></fb> et <fb><cv>4</cv></fb>. Les jetons distribués aléatoirement <fb>désignent l'ordre de communication</fb> : pour montrer une carte, le joueur ayant le jeton <fb><cv>2</cv></fb> doit attendre que celui ayant le jeton <fb><cv>1</cv></fb> ait communiqué.",
+    "level": 2,
+    "primary_icons": [
+      "card5"
+    ],
+    "secondary_icons": [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ]
+  },
+  {
+    "id": 202,
+    "fr": "L'équipage doit accomplir 3 objectifs. Le commandant désigne aléatoirement le membre d'équipage qui sera désorienté. Précision : si le membre d'équipage désorienté pose la carte la plus faible, il remporte le pli (cartes fusée inclues).",
+    "level": 1,
+    "primary_icons": [
+      "card3",
+      "confusedPlayer"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 203,
+    "fr": "L'équipage doit accomplir 1 objectif par personne. Chaque membre d'équipage pose sa <fb>carte objectif face cachée</fb> devant lui ; seuls les autres membres d'équipage peuvent la consulter.",
+    "level": 2,
+    "primary_icons": [
+      "card1",
+      "slash",
+      "player"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 204,
+    "fr": "L'équipage doit accomplir 5 objectifs. Les membres d'équipage doivent réaliser leurs objectifs lors de plis qu'ils <fb>ont eux-mêmes ouverts</fb>.",
+    "level": 2,
+    "primary_icons": [
+      "card5"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 205,
+    "fr": "L'équipage doit accomplir 5 objectifs. Pour chaque pli, le membre d'équipage qui fait l'ouverture pose deux cartes face cachée devant lui et les autres membres choisissent au hasard celle qui sera jouée.",
+    "level": 2,
+    "primary_icons": [
+      "card5",
+      "greyCard",
+      "greyCard"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 206,
+    "fr": "L'équipage doit accomplir 5 objectifs. Après chaque pli, les cartes objectifs sont données au voisin de gauche.",
+    "level": 2,
+    "primary_icons": [
+      "arrowL",
+      "card5"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 207,
+    "fr": "L'équipage doit accomplir 5 objectifs. Les membres d'équipage doivent réaliser leurs objectifs lors de plis qu'ils <fb>n'ont pas ouverts eux-mêmes</fb>.",
+    "level": 2,
+    "primary_icons": [
+      "card5"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 208,
+    "fr": "L'équipage doit accomplir 4 objectifs. Avant chaque pli, une <fb>carte objectif de la pioche est retournée</fb> ; lors de ce pli, les membres d'équipage ne peuvent pas jouer une carte de la même couleur ou de la même valeur, sauf s'ils n'ont pas le choix.",
+    "level": 2,
+    "primary_icons": [
+      "card4"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 209,
+    "fr": "L'équipage doit accomplir 5 objectifs avec les jetons <fb><cv>›</cv></fb> et <fb><cv>››</cv></fb>. Le commandant désigne aléatoirement le membre d'équipage qui sera désorienté. Précision : si le membre d'équipage désorienté pose la carte la plus faible, il remporte le pli (cartes fusée inclues).",
+    "level": 2,
+    "primary_icons": [
+      "card5",
+      "confusedPlayer"
+    ],
+    "secondary_icons": [
+      "ta1",
+      "ta2"
+    ]
+  },
+  {
+    "id": 210,
+    "fr": "Chaque membre d'équipage a 2 objectifs qu'il ne doit pas réaliser.",
+    "level": 1,
+    "primary_icons": [
+      "redCard2",
+      "slash",
+      "player"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 211,
+    "fr": "Aucune carte de couleur <cp>rose</cp> ou <cg>verte</cg> ne doit faire de pli.",
+    "level": 2,
+    "primary_icons": [
+      "pinkCardCrossed",
+      "greenCardCrossed"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 212,
+    "fr": "L'équipage doit accomplir 5 objectifs. Lorsqu'un membre d'équipage ouvre le pli, les autres jouent leur carte face cachée et la révèlent une fois que tout le monde a posé.",
+    "level": 2,
+    "primary_icons": [
+      "card5",
+      "overlayCards"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 213,
+    "fr": "Lorsqu'un membre d'équipage joue sa carte, il peut annoncer <fi>je prends !</fi>. S’il ne remporte pas le pli, la mission échoue. Cette annonce doit être faite une fois par pli.",
+    "level": 2,
+    "primary_icons": [
+      "hand"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 214,
+    "fr": "L'équipage doit accomplir 5 objectifs avec les jetons <fb><cv>1</cv></fb> et <fb><cv>2</cv></fb>. Après avoir demandé à l'équipage leur besoin en communication, le commandant distribue les jetons radio (répondre par <fi>pas du tout</fi>, <fi>un peu</fi> ou <fi>beaucoup</fi>).",
+    "level": 2,
+    "primary_icons": [
+      "card5"
+    ],
+    "secondary_icons": [
+      "t1",
+      "t2",
+      "communicationTokens"
+    ]
+  },
+  {
+    "id": 215,
+    "fr": "L'équipage doit accomplir 5 objectifs. Après chaque pli, le jeton commandant est donné au membre d'équipage à gauche du commandant actuel ; c'est lui qui ouvrira le prochain pli.",
+    "level": 2,
+    "primary_icons": [
+      "card5"
+    ],
+    "secondary_icons": [
+      "arrowL",
+      "commander"
+    ]
+  },
+  {
+    "id": 216,
+    "fr": "8 objectifs sont posés face visible sur la table. Successivement, chaque membre d'équipage choisit un objectif. Dès qu'un membre d'équipage accomplit un objectif, il en choisit un autre parmi ceux qui restent sur la table.",
+    "level": 2,
+    "primary_icons": [
+      "card",
+      "card",
+      "card",
+      "card"
+    ],
+    "secondary_icons": [
+      "card",
+      "card",
+      "card",
+      "card"
+    ]
+  },
+  {
+    "id": 217,
+    "fr": "Aucune carte impaire ne doit remporter de pli (cartes fusée exclues).",
+    "level": 2,
+    "primary_icons": "",
+    "secondary_icons": ""
+  },
+  {
+    "id": 218,
+    "fr": "L'équipage doit accomplir 6 objectifs avec le jeton <fb><cv>Ω</cv></fb>. Le commandant désigne aléatoirement le membre d'équipage qui sera désorienté. Précision : si le membre d'équipage désorienté pose la carte la plus faible, il remporte le pli (cartes fusée inclues).",
+    "level": 2,
+    "primary_icons": [
+      "card6",
+      "confusedPlayer"
+    ],
+    "secondary_icons": [
+      "to"
+    ]
+  },
+  {
+    "id": 219,
+    "fr": "4 objectifs sont posés face visible sur la table. Chaque membre d'équipage récupère les objectifs identiques aux cartes de couleur qu'il a en main.",
+    "level": 2,
+    "primary_icons": [
+      "card",
+      "card",
+      "card",
+      "card"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 220,
+    "fr": "8 objectifs sont posés sur la table en formant 2 lignes. Successivement, chaque membre d'équipage peut intervertir 2 objectifs de la même ligne ou de la même colonne. Les cartes de la 1ère ligne doivent remporter le pli contenant la carte de la 2ème ligne correspondant à leur colonne.",
+    "level": 3,
+    "primary_icons": [
+      "card",
+      "card",
+      "card",
+      "card"
+    ],
+    "secondary_icons": [
+      "card",
+      "card",
+      "card",
+      "card"
+    ]
+  },
+  {
+    "id": 221,
+    "fr": "Chaque N-ième pli de la mission doit contenir une carte de couleur de valeur N. Par exemple, le 1er pli doit contenir une carte 1 de couleur.",
+    "level": 1,
+    "primary_icons": "",
+    "secondary_icons": ""
+  },
+  {
+    "id": 222,
+    "fr": "L'équipage doit accomplir 6 objectifs avec les jetons <fb><cv>1</cv></fb> et <fb><cv>Ω</cv></fb>. Après avoir demandé à l'équipage leur besoin en communication, le commandant distribue les jetons radio (répondre par <fi>pas du tout</fi>, <fi>un peu</fi> ou <fi>beaucoup</fi>).",
+    "level": 2,
+    "primary_icons": [
+      "card6"
+    ],
+    "secondary_icons": [
+      "t1",
+      "to",
+      "communicationTokens"
+    ]
+  },
+  {
+    "id": 223,
+    "fr": "Le membre d'équipage ayant la carte 9 bleue l'annonce et ne doit remporter aucune carte bleue, de même pour la carte 9 verte.",
+    "level": 2,
+    "primary_icons": [
+      "blueCardCrossed",
+      "greenCardCrossed"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 224,
+    "fr": "L'équipage doit accomplir 5 objectifs avec les jetons <fb><cv>1</cv></fb>, <fb><cv>2</cv></fb> et <fb><cv>3</cv></fb>. Le commandant désigne aléatoirement le membre d'équipage qui sera désorienté. Précision : si le membre d'équipage désorienté pose la carte la plus faible, il remporte le pli (cartes fusée inclues).",
+    "level": 2,
+    "primary_icons": [
+      "card5",
+      "confusedPlayer"
+    ],
+    "secondary_icons": [
+      "t1",
+      "t2",
+      "t3"
+    ]
+  },
+  {
+    "id": 225,
+    "fr": "L'équipage doit accomplir 6 objectifs avec les jetons <fb><cv>›</cv></fb> et <fb><cv>››</cv></fb>. Après chaque pli, les objectifs sont donnés au voisin de gauche.",
+    "level": 2,
+    "primary_icons": [
+      "arrowL",
+      "card6"
+    ],
+    "secondary_icons": [
+      "ta1",
+      "ta2"
+    ]
+  },
+  {
+    "id": 226,
+    "fr": "L'équipage doit accomplir 6 objectifs avec les jetons <fb><cv>›</cv></fb> et <fb><cv>››</cv></fb>. Les membres d'équipage doivent réaliser leurs objectifs lors de plis qu'ils <fb>ont ouverts eux-mêmes</fb>.",
+    "level": 3,
+    "primary_icons": [
+      "card6"
+    ],
+    "secondary_icons": [
+      "ta1",
+      "ta2"
+    ]
+  },
+  {
+    "id": 227,
+    "fr": "L'équipage doit accomplir 6 objectifs avec les jetons <fb><cv>›</cv></fb> et <fb><cv>››</cv></fb>. Lorsqu'un membre d'équipage ouvre le pli, les autres jouent leur carte face cachée et la révèlent une fois que tout le monde a posé.",
+    "level": 3,
+    "primary_icons": [
+      "card6",
+      "overlayCards"
+    ],
+    "secondary_icons": [
+      "ta1",
+      "ta2"
+    ]
+  },
+  {
+    "id": 228,
+    "fr": "L'équipage doit accomplir 6 objectifs avec les jetons <fb><cv>1</cv></fb> et <fb><cv>2</cv></fb>. Après chaque pli, le jeton commandant est donné au membre d'équipage à gauche du commandant actuel ; c'est lui qui ouvrira le prochain pli.",
+    "level": 2,
+    "primary_icons": [
+      "card6"
+    ],
+    "secondary_icons": [
+      "arrowL",
+      "commander",
+      "t1",
+      "t2"
+    ]
+  },
+  {
+    "id": 229,
+    "fr": "L'équipage doit accomplir 6 objectifs avec les jetons <fb><cv>›</cv></fb> et <fb><cv>››</cv></fb>. Les membres d'équipage doivent réaliser leurs objectifs lors de plis qu'ils <fb>n'ont pas ouverts eux-mêmes</fb>.",
+    "level": 3,
+    "primary_icons": [
+      "card6"
+    ],
+    "secondary_icons": [
+      "ta1",
+      "ta2"
+    ]
+  },
+  {
+    "id": 230,
+    "fr": "Un pli multicolore doit être remporté : il doit contenir au moins une carte de chaque couleur.",
+    "level": 2,
+    "primary_icons": [
+      "allColorCards"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 231,
+    "fr": "Chaque membre d'équipage a 3 objectifs qu'il ne doit pas réaliser.",
+    "level": 2,
+    "primary_icons": [
+      "redCard3",
+      "slash",
+      "player"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 232,
+    "fr": "L'équipage doit accomplir 8 objectifs avec les jetons <fb><cv>1</cv></fb>, <fb><cv>2</cv></fb>, <fb><cv>3</cv></fb> et <fb><cv>4</cv></fb>. Les jetons distribués aléatoirement désignent l'ordre de communication : pour montrer une carte, le joueur ayant le jeton <fb><cv>2</cv></fb> doit attendre que celui ayant le jeton <fb><cv>1</cv></fb> ait communiqué.",
+    "level": 3,
+    "primary_icons": [
+      "card8"
+    ],
+    "secondary_icons": [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ]
+  },
+  {
+    "id": 233,
+    "fr": "L'équipage doit accomplir 6 objectifs. Les membres d'équipage doivent réaliser leurs objectifs lors de plis qu'ils <fb>n'ont pas ouverts eux-mêmes</fb>. Après chaque pli, le jeton commandant est donné au membre d'équipage à gauche du commandant actuel ; c'est lui qui ouvrira le prochain pli.",
+    "level": 2,
+    "primary_icons": [
+      "card6"
+    ],
+    "secondary_icons": [
+      "arrowL",
+      "commander"
+    ]
+  },
+  {
+    "id": 234,
+    "fr": "Le membre d'équipage ayant la <cb>carte 9 bleue</cb> l'annonce et ne doit remporter <cb>aucune carte bleue</cb>, de même pour la <cg>carte 9 verte</cg> et la <cy>carte 9 jaune</cy>.",
+    "level": 3,
+    "primary_icons": [
+      "blueCardCrossed",
+      "greenCardCrossed",
+      "yellowCardCrossed"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 235,
+    "fr": "L'équipage doit accomplir 6 objectifs. Les membres d'équipage doivent réaliser leurs objectifs lors de plis qu'ils <fb>n'ont pas ouverts eux-mêmes</fb>. Après chaque pli, les objectifs sont donnés au voisin de gauche.",
+    "level": 2,
+    "primary_icons": [
+      "arrowL",
+      "card6"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 236,
+    "fr": "Le membre d'équipage ayant la <cb>carte 9 bleue</cb> l'annonce et ne doit remporter <cb>aucune carte bleue</cb>. Le membre d'équipage ayant la <cb>carte 1 bleue</cb> l'annonce ; il est désorienté et ne doit remporter <cb>aucune carte bleue</cb>.",
+    "level": 2,
+    "primary_icons": [
+      "blueCardCrossed",
+      "playerConfused",
+      "blueCardCrossed"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 237,
+    "fr": "L'équipage doit accomplir 3 objectifs. Aucune carte impaire ne doit remporter de pli (cartes fusée exclues).",
+    "level": 3,
+    "primary_icons": [
+      "card3"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 238,
+    "fr": "L'équipage doit accomplir 8 objectifs avec les jetons <fb><cv>1</cv></fb>, <fb><cv>2</cv></fb> et <fb><cv>3</cv></fb>. Après avoir demandé à l'équipage leur besoin en communication, le commandant distribue les jetons radio (répondre par <fi>pas du tout</fi>, <fi>un peu</fi> ou <fi>beaucoup</fi>).",
+    "level": 3,
+    "primary_icons": [
+      "card8"
+    ],
+    "secondary_icons": [
+      "t1",
+      "t2",
+      "t3",
+      "communicationTokens"
+    ]
+  },
+  {
+    "id": 239,
+    "fr": "Un pli doit contenir au moins 3 cartes de même valeur (cartes fusée exclues).",
+    "level": 2,
+    "primary_icons": "",
+    "secondary_icons": ""
+  },
+  {
+    "id": 240,
+    "fr": "Lorsqu'un membre d'équipage joue sa carte, il peut annoncer <fi>je prends !</fi>. S’il ne remporte pas le pli, la mission échoue. Cette annonce doit être faite une fois par pli. Le commandant désigne aléatoirement le membre d'équipage qui sera désorienté. Précision : si le membre d'équipage désorienté pose la carte la plus faible, il remporte le pli (cartes fusée inclues).",
+    "level": 2,
+    "primary_icons": [
+      "hand",
+      "confusedPlayer"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 301,
+    "fr": "Une carte 4 de couleur doit remporter un pli contenant une carte 9 de couleur.",
+    "level": 2,
+    "primary_icons": "",
+    "secondary_icons": ""
+  },
+  {
+    "id": 302,
+    "fr": "Le commandant doit remporter 3 plis qui ne doivent pas contenir de cartes 7, 8 ou 9 de couleur.",
+    "level": 2,
+    "primary_icons": [
+      "commander",
+      "card3"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 303,
+    "fr": "22 objectifs sont distribués. Réalisez-en le plus possible !",
+    "level": 1,
+    "primary_icons": [
+      "card22"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 304,
+    "fr": "Les membres d'équipages décident du nombre de plis que le commandant doit effectuer. Ce dernier ne peut pas parler avant que le nombre soit défini.",
+    "level": 1,
+    "primary_icons": [
+      "player",
+      "player",
+      "arrowR",
+      "commander"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 305,
+    "fr": "Sans concertation, le commandant donne un objectif à un membre d'équipage qui ne doit remporter qu'un seul pli.",
+    "level": 1,
+    "primary_icons": [
+      "commander",
+      "arrowL",
+      "card1",
+      "player"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 306,
+    "fr": "Aucun pli ne doit être ouvert avec une <cb>carte bleue</cb> ou une carte fusée.",
+    "level": 1,
+    "primary_icons": [
+      "blueCard",
+      "rockets"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 307,
+    "fr": "Une carte 1 de couleur doit remporter un pli contenant 2 cartes 9 de couleur.",
+    "level": 2,
+    "primary_icons": [
+      "ones",
+      "nines"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 308,
+    "fr": "Aucun membre d'équipage ne peut remporter deux plis à la suite.",
+    "level": 1,
+    "primary_icons": "",
+    "secondary_icons": ""
+  },
+  {
+    "id": 309,
+    "fr": "Le commandant demande à chacun de choisir un objectif : l'un d'eux devra remporter un seul pli tandis qu'un autre ne doit en faire aucun (répondre par <fi>1</fi> ou <fi>aucun</fi>).",
+    "level": 2,
+    "primary_icons": "",
+    "secondary_icons": ""
+  },
+  {
+    "id": 310,
+    "fr": "Chaque membre d'équipage reçoit 2 objectifs à réaliser dans un même pli.",
+    "level": 3,
+    "primary_icons": [
+      "card2",
+      "slash",
+      "player"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 311,
+    "fr": "La carte fusée 1 doit remporter un pli contenant au moins une carte 1 de couleur.",
+    "level": 1,
+    "primary_icons": [
+      "rockets"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 312,
+    "fr": "Chaque carte 7 de couleur doit remporter un pli.",
+    "level": 1,
+    "primary_icons": "",
+    "secondary_icons": ""
+  },
+  {
+    "id": 313,
+    "fr": "Chaque carte 6 de couleur doit remporter un pli.",
+    "level": 2,
+    "primary_icons": "",
+    "secondary_icons": ""
+  },
+  {
+    "id": 314,
+    "fr": "Chaque carte 5 de couleur doit remporter un pli.",
+    "level": 3,
+    "primary_icons": "",
+    "secondary_icons": ""
+  },
+  {
+    "id": 401,
+    "fr": "L'équipage doit accomplir 6 objectifs. À la fin du premier tour, chacun pioche une carte dans la main de son voisin de droite.",
+    "level": 2,
+    "primary_icons": [
+      "card6"
+    ],
+    "secondary_icons": [
+      "giveCard"
+    ]
+  },
+  {
+    "id": 402,
+    "fr": "Le membre d'équipage situé à gauche de celui qui possède la <cb>carte 9 bleue</cb> doit remporter toutes les <cb>cartes bleues</cb>.",
+    "level": 2,
+    "primary_icons": [
+      "arrowL",
+      "blueCard"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 403,
+    "fr": "Le membre d'équipage situé à gauche de celui qui possède la <cg>carte 9 verte</cg> doit remporter toutes les <cg>cartes vertes</cg>.",
+    "level": 2,
+    "primary_icons": [
+      "arrowL",
+      "greenCard"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 404,
+    "fr": "Aucune carte de couleur <cb>bleue</cb> ou <cy>jaune</cy> ne doit faire de pli.",
+    "level": 2,
+    "primary_icons": [
+      "blueCardCrossed",
+      "yellowCardCrossed"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 405,
+    "fr": "Le membre d'équipage ayant la <cp>carte 9 rose</cp> l'annonce et ne doit remporter <cp>aucune carte rose</cp>, de même pour la <cy>carte 9 jaune</cy>.",
+    "level": 2,
+    "primary_icons": [
+      "pinkCardCrossed",
+      "yellowCardCrossed"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 406,
+    "fr": "Le membre d'équipage ayant la <cb>carte bleue 9</cb> l'annonce et ne doit remporter <cb>aucune carte bleue</cb>, de même pour la <cp>carte rose 9</cp>. Le membre d'équipage ayant la <cb>carte bleue 1</cb> l'annonce ; il est désorienté et ne doit remporter <cb>aucune carte bleue</cb>.",
+    "level": 2,
+    "primary_icons": [
+      "blueCardCrossed",
+      "pinkCardCrossed",
+      "confusedPlayer",
+      "blueCardCrossed"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 407,
+    "fr": "4 objectifs sont distribués. Chaque membre d'équipage choisit 3 cartes dans son jeu qu'il donne à son voisin de gauche. 2 objectifs sont ensuite distribués.",
+    "level": 1,
+    "primary_icons": [
+      "card4",
+      "threeFaceDown",
+      "card2"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 408,
+    "fr": "4 objectifs sont distribués. Chaque membre d'équipage choisit 3 cartes dans son jeu qu'il donne à son voisin de gauche. 4 objectifs sont ensuite distribués.",
+    "level": 2,
+    "primary_icons": [
+      "card4",
+      "threeFaceDown",
+      "card4"
+    ],
+    "secondary_icons": ""
+  },
+  {
+    "id": 409,
+    "fr": "4 objectifs sont distribués avec les jetons <fb><cv>›</cv></fb> et <fb><cv>››</cv></fb>. Chaque membre d'équipage choisit 3 cartes dans son jeu qu'il donne à son voisin de gauche. 4 objectifs sont ensuite distribués.",
+    "level": 2,
+    "primary_icons": [
+      "card4",
+      "threeFaceDown",
+      "card4"
+    ],
+    "secondary_icons": [
+      "ta1",
+      "ta2"
+    ]
+  },
+  {
+    "id": 410,
+    "fr": "5 objectifs sont distribués. Chaque membre d'équipage choisit 3 cartes dans son jeu qu'il donne à son voisin de gauche. 5 objectifs sont ensuite distribués.",
+    "level": 3,
+    "primary_icons": [
+      "card5",
+      "threeFaceDown",
+      "card5"
+    ],
+    "secondary_icons": ""
   }
 ]

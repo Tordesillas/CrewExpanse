@@ -2,7 +2,7 @@ import React, {ReactNode} from 'react';
 import Mission from './Mission';
 import {
     Card, TokenArrow1, TokenArrow2, TokenArrow3, TokenArrow4, TokenOverlay, Ones, Player, Slash, Balance, Commander,
-    YellowCard, GreenCard, PinkCard, BlueCard, CommunicationToken, AllColorCards, GiveLeft, Hand, ThreeFaceDown,
+    YellowCard, GreenCard, PinkCard, BlueCard, CommunicationToken, AllColorCards, ArrowLeft, ArrowRight, Hand, ThreeFaceDown,
     OverlayCards, OverlayCommunicationTokens, GiveCard, Nines, RocketCards, Token1, Token2, Token3, Token4, Token5, TokenOmega
 } from '../components/icons';
 import {Colors, DifficultyLevel} from '../utils';
@@ -94,9 +94,10 @@ export default class MissionsFactory {
                 return <Player/>;
             case 'confusedPlayer':
                 return <Player confused/>;
-            case 'arrow':
-            case 'arrowLeft':
-                return <GiveLeft/>;
+            case 'arrowL':
+                return <ArrowLeft/>;
+            case 'arrowR':
+                return <ArrowRight/>;
             case 'slash':
                 return <Slash/>;
             case 'hand':
