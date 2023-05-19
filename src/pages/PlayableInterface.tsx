@@ -25,25 +25,40 @@ export default class PlayableInterface extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
 
-        const {game} = props.route.params;
-        const newMission = game.pickNewMission();
-        if (!newMission) {
-            props.navigation.dispatch(StackActions.replace('EndScreen', {game}));
-        }
-
         this.state = {
-            mission: newMission || new Mission('', 0, 0, [], []),
-            score: game.score,
+            mission: this.initNewMission(),
+            score: props.route.params.game.score,
             distressSignal: false
         };
     }
 
-    newMission() {
+    initNewMission(): Mission {
+        const {route, navigation} = this.props;
+        const {game} = route.params;
+
+        const newMission = game.pickNewMission();
+        if (!newMission) {
+            navigation.dispatch(StackActions.replace('EndScreen', {game}));
+            return new Mission('', 0, 0, [], []);
+        } else {
+            return newMission;
+        }
+    }
+
+    nextMission() {
         const {navigation, route} = this.props;
         StorageService.isSameDifficultyLevel()
-            .then((skipChoice) =>
-                navigation.dispatch(StackActions.replace(skipChoice ? 'PlayableInterface' : 'DifficultyChoice', {game: route.params.game}))
-            );
+            .then((skipChoice) => {
+                if (skipChoice) {
+                    this.setState({
+                        mission: this.initNewMission(),
+                        score: route.params.game.score,
+                        distressSignal: false
+                    });
+                } else {
+                    navigation.dispatch(StackActions.replace('DifficultyChoice', {game: route.params.game}))
+                }
+            });
     }
 
     failMission() {
@@ -147,7 +162,7 @@ export default class PlayableInterface extends React.Component<Props, State> {
 
                 {(score === null) ? (
                     <CornerButton
-                        onPress={() => this.newMission()}
+                        onPress={() => this.nextMission()}
                         icon={<Next size={60}/>}
                         left
                         important
@@ -155,7 +170,7 @@ export default class PlayableInterface extends React.Component<Props, State> {
                 ) : (
                     <>
                         <CornerButton
-                            onPress={() => this.newMission()}
+                            onPress={() => this.nextMission()}
                             icon={<Next size={60}/>}
                             left
                             important
