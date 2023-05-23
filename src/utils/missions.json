@@ -791,7 +791,7 @@
   },
   {
     "id": 223,
-    "fr": "Le membre d'équipage ayant la carte 9 bleue l'annonce et ne doit remporter aucune carte bleue, de même pour la carte 9 verte.",
+    "fr": "Le membre d'équipage ayant la <cb>carte 9 bleue</cb> l'annonce et ne doit remporter <cb>aucune carte bleue</cb>, de même pour la <cg>carte 9 verte</cg>.",
     "level": 2,
     "primary_icons": [
       "blueCardCrossed",
