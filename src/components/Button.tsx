@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         overflow: 'hidden'
     },
     button: {
-        height: 60,
+        height: 54,
         borderRadius: 5,
         alignItems: 'center'
     },
@@ -59,7 +59,8 @@ const styles = StyleSheet.create({
 
         fontSize: 16,
         fontFamily: Fonts.Andika.Regular,
-        color: Colors.DARK_CYAN
+        color: Colors.DARK_CYAN,
+        lineHeight: 24
     },
     icon_wrapper: {
         paddingRight: 10

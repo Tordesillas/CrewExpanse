@@ -43,3 +43,4 @@ export {Hand} from './Hand';
 export {ThreeFaceDown} from './ThreeFaceDown';
 export {OverlayCards} from './OverlayCards';
 export {OverlayCommunicationTokens} from './OverlayCommunicationTokens';
+export {Warranty} from './Warranty';

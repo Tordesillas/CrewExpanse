@@ -2,7 +2,7 @@ import React from 'react';
 import {Linking, SafeAreaView, StyleSheet, View} from 'react-native';
 import {NavigationProp} from '@react-navigation/native';
 import {Background, Button, CheckboxButton, CornerButton} from '../components';
-import {Book, CrewExpanse, LeftArrow} from '../components/icons';
+import {Book, CrewExpanse, LeftArrow, Warranty} from "../components/icons";
 import StorageService from '../services/StorageService';
 import {Colors} from '../utils';
 
@@ -55,11 +55,18 @@ export default class Settings extends React.Component<Props, State> {
                     />
                 </View>
 
-                <View style={styles.button_wrapper}>
+                <View style={styles.buttons_container}>
                     <Button
+                        style={styles.bottom_button}
                         text={"Manuel du jeu"}
                         onPress={() => Linking.openURL('https://iello.fr/wp-content/uploads/2020/05/The-Crew_Rulebook.pdf')}
                         icon={<Book/>}
+                    />
+                    <Button
+                        style={styles.bottom_button}
+                        text={"Politique de confidentialité"}
+                        onPress={() => Linking.openURL('https://tordesillas.github.io/CrewExpanse/PrivacyPolicy')}
+                        icon={<Warranty/>}
                     />
                 </View>
 
@@ -84,7 +91,10 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingHorizontal: 30
     },
-    button_wrapper: {
+    bottom_button: {
+        marginTop: 8
+    },
+    buttons_container: {
         alignItems: 'center',
         paddingVertical: 10,
         marginBottom: 150
